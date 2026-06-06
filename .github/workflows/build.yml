@@ -1,4 +1,4 @@
-name: Build Bazzite
+name: Build AgungOS
 on:
   schedule:
     - cron: "40 4 * * 1" # 4:40 utc monday
@@ -58,12 +58,12 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - bazzite
-          - bazzite-gnome
-          - bazzite-nvidia
-          - bazzite-gnome-nvidia
-          - bazzite-nvidia-open
-          - bazzite-gnome-nvidia-open
+          - agungos
+          - agungos-gnome
+          - agungos-nvidia
+          - agungos-gnome-nvidia
+          - agungos-nvidia-open
+          - agungos-gnome-nvidia-open
         include:
           - fedora_version: 44
             kernel_flavor: ogc
@@ -113,20 +113,20 @@ jobs:
           # Define Container Target
           #
           if [[ "$IMAGE" == *"deck"* && "$IMAGE" == *"nvidia"* ]]; then
-            echo "container_target=bazzite-nvidia" >> "$GITHUB_OUTPUT"
-            echo "nvidia_base=bazzite-deck" >> "$GITHUB_OUTPUT"
+            echo "container_target=agungos-nvidia" >> "$GITHUB_OUTPUT"
+            echo "nvidia_base=agungos-deck" >> "$GITHUB_OUTPUT"
             echo "install_nvidia=true" >> "$GITHUB_OUTPUT"
           elif [[ "$IMAGE" == *"nvidia"* ]]; then
-            echo "container_target=bazzite-nvidia" >> "$GITHUB_OUTPUT"
-            echo "nvidia_base=bazzite" >> "$GITHUB_OUTPUT"
+            echo "container_target=agungos-nvidia" >> "$GITHUB_OUTPUT"
+            echo "nvidia_base=agungos" >> "$GITHUB_OUTPUT"
             echo "install_nvidia=true" >> "$GITHUB_OUTPUT"
           elif [[ "$IMAGE" == *"deck"* ]]; then
-            echo "container_target=bazzite-deck" >> "$GITHUB_OUTPUT"
-            echo "nvidia_base=bazzite-deck" >> "$GITHUB_OUTPUT" # NOOP
+            echo "container_target=agungos-deck" >> "$GITHUB_OUTPUT"
+            echo "nvidia_base=agungos-deck" >> "$GITHUB_OUTPUT" # NOOP
             echo "install_nvidia=false" >> "$GITHUB_OUTPUT"
           else
-            echo "container_target=bazzite" >> "$GITHUB_OUTPUT"
-            echo "nvidia_base=bazzite" >> "$GITHUB_OUTPUT" # NOOP
+            echo "container_target=agungos" >> "$GITHUB_OUTPUT"
+            echo "nvidia_base=agungos" >> "$GITHUB_OUTPUT" # NOOP
             echo "install_nvidia=false" >> "$GITHUB_OUTPUT"
           fi
           # Nvidia flavor
@@ -139,7 +139,7 @@ jobs:
           #
           # Define push and pull registries
           #
-          PULL_REGISTRY=ghcr.io/ublue-os
+          PULL_REGISTRY=ghcr.io/Anakagung2009-bit
           PUSH_REGISTRY=ghcr.io/${{ steps.repo_owner_case.outputs.lowercase }}
           echo "push_registry=${PUSH_REGISTRY}" >> $GITHUB_OUTPUT
           echo "pull_registry=${PULL_REGISTRY}" >> $GITHUB_OUTPUT
@@ -167,7 +167,7 @@ jobs:
         id: download_offline_docs
         continue-on-error: true
         env:
-          docs_repo: ublue-os/docs.bazzite.gg
+          docs_repo: ublue-os/docs.agungos.gg
           GH_TOKEN: ${{ github.token }}
         run: |
           DOCS_DIR="${{ github.workspace }}/system_files/desktop/shared/usr/share/ublue-os/docs/html"
@@ -223,12 +223,12 @@ jobs:
           # Kernel & akmods
           #
           AKMODS_TAG="${{ steps.base.outputs.akmods_tag }}"
-          sudo podman pull ghcr.io/ublue-os/akmods:${AKMODS_TAG}
-          # sudo podman pull ghcr.io/ublue-os/akmods-extra:${AKMODS_TAG}
+          sudo podman pull ghcr.io/Anakagung2009-bit/akmods:${AKMODS_TAG}
+          # sudo podman pull ghcr.io/Anakagung2009-bit/akmods-extra:${AKMODS_TAG}
 
           if [ "${{ steps.base.outputs.install_nvidia }}" == "true" ]; then
             NVIDIA_FLAVOR="${{ steps.base.outputs.nvidia_flavor }}"
-            sudo podman pull "ghcr.io/ublue-os/akmods-${NVIDIA_FLAVOR}:${AKMODS_TAG}"
+            sudo podman pull "ghcr.io/Anakagung2009-bit/akmods-${NVIDIA_FLAVOR}:${AKMODS_TAG}"
           fi
 
 
@@ -265,7 +265,7 @@ jobs:
         run: |
           set -eoux pipefail
 
-          CACHE_NAME="bazzite-${FEDORA_VERSION}"
+          CACHE_NAME="agungos-${FEDORA_VERSION}"
 
           ALLOW_CACHE_WRITE="false"
 
@@ -322,20 +322,20 @@ jobs:
           path: /var/tmp/buildah-cache-*
           key: ${{ runner.os }}-${{ runner.arch }}-buildah-${{ env.CACHE_NAME }}
 
-      # Relabel the image with Bazzite labels
+      # Relabel the image with AgungOS labels
       - name: Apply Labels
         id: relabel
         env:
           IMAGE_LABELS: |
-            io.artifacthub.package.logo-url=https://raw.githubusercontent.com/ublue-os/bazzite/main/repo_content/logo.png
-            io.artifacthub.package.readme-url=https://raw.githubusercontent.com/ublue-os/bazzite/refs/heads/main/README.md
-            org.opencontainers.image.description=Bazzite is a custom image that brings the best of Linux gaming to all of your devices - including your favorite handheld.
+            io.artifacthub.package.logo-url=https://raw.githubusercontent.com/Anakagung2009-bit/AgungOS/main/repo_content/logo.png
+            io.artifacthub.package.readme-url=https://raw.githubusercontent.com/Anakagung2009-bit/AgungOS/refs/heads/main/README.md
+            org.opencontainers.image.description=AgungOS is a custom image that brings the best of Linux gaming to all of your devices - including your favorite handheld.
             org.opencontainers.image.licenses=Apache-2.0
             org.opencontainers.image.revision=${{ github.sha }}
-            org.opencontainers.image.source=https://bazzite.gg
-            org.opencontainers.image.title=Bazzite
+            org.opencontainers.image.source=https://agungos.gg
+            org.opencontainers.image.title=AgungOS
             org.opencontainers.image.vendor=Universal Blue
-            org.opencontainers.image.url=https://bazzite.gg
+            org.opencontainers.image.url=https://agungos.gg
         run: |
           version="${{ matrix.fedora_version }}.$(date  +%Y%m%d)"
           if [[ "${{ github.ref_name }}" == "unstable" ]]; then
@@ -575,15 +575,15 @@ jobs:
     secrets: inherit
     uses: ./.github/workflows/generate_release.yml
 
-  kickoff_bazzite_dx:
+  kickoff_agungos_dx:
     runs-on: ubuntu-24.04
     needs: [generate_release]
-    if: github.repository == 'ublue-os/bazzite' && github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    if: github.repository == 'Anakagung2009-bit/AgungOS' && github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     steps:
-      - name: Kickoff Bazzite-DX
+      - name: Kickoff AgungOS-DX
         uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697 # v4
         continue-on-error: true
         with:
           token: ${{ secrets.PAT }}
-          repository: ublue-os/bazzite-dx
+          repository: Anakagung2009-bit/AgungOS-dx
           event-type: build

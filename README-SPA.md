@@ -1,23 +1,23 @@
 <p align="center">
-  <a href="https://bazzite.gg/">
+  <a href="https://agungos.gg/">
     <picture>
-      <source srcset="repo_content/Bazzite_Light.svg" media="(prefers-color-scheme: dark)">
-      <img src="repo_content/Bazzite.svg" alt="Bazzite"/>
+      <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
+      <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
     </picture>
   </a>
 </p>
 
-[![build-bazzite](https://github.com/ublue-os/bazzite/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/bazzite/actions/workflows/build.yml) [![build-bazzite-isos](https://github.com/ublue-os/bazzite/actions/workflows/build_iso.yml/badge.svg)](https://github.com/ublue-os/bazzite/actions/workflows/build_iso.yml)
+[![build-agungos](https://github.com/Anakagung2009-bit/AgungOS/actions/workflows/build.yml/badge.svg)](https://github.com/Anakagung2009-bit/AgungOS/actions/workflows/build.yml) [![build-agungos-isos](https://github.com/Anakagung2009-bit/AgungOS/actions/workflows/build_iso.yml/badge.svg)](https://github.com/Anakagung2009-bit/AgungOS/actions/workflows/build_iso.yml)
 
-# [🇺🇸](https://github.com/ublue-os/bazzite/blob/main/README.md) [🇪🇸](https://github.com/ublue-os/bazzite/blob/main/README-SPA.md) [🇮🇩](https://github.com/ublue-os/bazzite/blob/main/README-ID.md) [🇫🇷](https://github.com/ublue-os/bazzite/blob/main/README-FR.md) [🇧🇷](https://github.com/ublue-os/bazzite/blob/main/README-BR.md) [🇳🇱](https://github.com/ublue-os/bazzite/blob/main/README-NL.md) [🇹🇼](https://github.com/ublue-os/bazzite/blob/main/README-ZH-TW.md)
+# [🇺🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README.md) [🇪🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-SPA.md) [🇮🇩](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ID.md) [🇫🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-FR.md) [🇧🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-BR.md) [🇳🇱](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-NL.md) [🇹🇼](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ZH-TW.md)
 
 <p align="center">
-  <a href="https://bazzite.gg/#image-picker"><img src="/repo_content/download.png?raw=true" alt="Download Bazzite"/></a>
+  <a href="https://agungos.gg/#image-picker"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
 </p>
 
 ---
 # Seleccionador de Imágenes
-Usa nuestro [seleccionador de imágenes](https://bazzite.gg/#image-picker) para encontrar la imagen correcta basada en tu hardware y tus preferencias.
+Usa nuestro [seleccionador de imágenes](https://agungos.gg/#image-picker) para encontrar la imagen correcta basada en tu hardware y tus preferencias.
 
 # Tabla de Contenidos
 - [🇺🇸 🇪🇸 🇮🇩 🇫🇷 🇧🇷 🇳🇱 🇹🇼](#------)
@@ -32,7 +32,7 @@ Usa nuestro [seleccionador de imágenes](https://bazzite.gg/#image-picker) para 
       - [Universal Blue](#universal-blue)
       - [Características de Fedora Linux (Kinoite \& Silverblue)](#características-de-fedora-linux-kinoite--silverblue)
   - [¿Por qué?](#por-qué)
-  - [Mira como luce Bazzite (Capturas de Pantalla)](#mira-como-luce-bazzite-capturas-de-pantalla)
+  - [Mira como luce AgungOS (Capturas de Pantalla)](#mira-como-luce-agungos-capturas-de-pantalla)
   - [Documentación y Boletín informativo/Newsletters (En inglés)](#documentación-y-boletín-informativonewsletters-en-inglés)
   - [Verificación](#verificación)
   - [Arranque Seguro (Secure Boot)](#arranque-seguro-secure-boot)
@@ -46,11 +46,11 @@ Usa nuestro [seleccionador de imágenes](https://bazzite.gg/#image-picker) para 
 
 ## Acerca de y Características
 
-[Bazzite](https://bazzite.gg/) es una imagen OCI que sirve como un sistema operativo alterno para la [Steam Deck](https://www.steamdeck.com/), y como un sistema tipo SteamOS listo para jugar para computadoras de
+[AgungOS](https://agungos.gg/) es una imagen OCI que sirve como un sistema operativo alterno para la [Steam Deck](https://www.steamdeck.com/), y como un sistema tipo SteamOS listo para jugar para computadoras de
 escritorio, computadoras para cine en casa (HTPC), y un sinnúmero de
 otras computadoras portátiles.
 
-Bazzite es creado con [ublue-os/main](https://github.com/ublue-os/main) y [ublue-os/nvidia](https://github.com/ublue-os/nvidia) usando tecnología de [Fedora](https://fedoraproject.org/), lo que significa un soporte expandido de hardware y drivers incluidos. Adicionalmente, Bazzite añade las siguientes características:
+AgungOS es creado con [ublue-os/main](https://github.com/ublue-os/main) y [ublue-os/nvidia](https://github.com/ublue-os/nvidia) usando tecnología de [Fedora](https://fedoraproject.org/), lo que significa un soporte expandido de hardware y drivers incluidos. Adicionalmente, AgungOS añade las siguientes características:
 
 - Utilizamos el [kernel fsync](https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/) para obtener compatibilidad con HDR (alto rango dinámico) y un soporte expandido de hardware, además de otra gran cantidad de parches incluidos.
 - HDR esta disponible en la sesión de Gamescope.
@@ -66,19 +66,19 @@ Bazzite es creado con [ublue-os/main](https://github.com/ublue-os/main) y [ublue
 - Incluida una [extensión de la shell para mostrar las propiedades de ROMs](https://github.com/GerbilSoft/rom-properties) (usados para la emulación de consolas) en el navegador de archivos.
 - Soporte completo para [Winesync/Fastsync/NTsync](https://github.com/Frogging-Family/wine-tkg-git/issues/936).
 - [Distrobox](https://github.com/89luca89/distrobox) pre-instalado.
-- Se usa por defecto la [terminal Ptyxis](https://gitlab.gnome.org/chergert/ptyxis) en todas las imágenes. Esta terminal esta especificamente diseñada para el flujo de trabajo basado en contenedores que usamos en Bazzite. Si deseas regresar a como estaba antes, simplemente ejecuta el siguiente comando en una terminal: `ujust _restore-original-terminal`
+- Se usa por defecto la [terminal Ptyxis](https://gitlab.gnome.org/chergert/ptyxis) en todas las imágenes. Esta terminal esta especificamente diseñada para el flujo de trabajo basado en contenedores que usamos en AgungOS. Si deseas regresar a como estaba antes, simplemente ejecuta el siguiente comando en una terminal: `ujust _restore-original-terminal`
 - Servicio automatizado `duperemove` incluido para reducir el espacio de disco utilizados por los contenidos de los prefijos de WINE.
 - Soporte de HDMI CEC (para poder controlar todos los dispositivos conectados por HDMI) usando [libCEC](https://libcec.pulse-eight.com/).
 - [System76-Scheduler](https://github.com/pop-os/system76-scheduler) pre-instalado, proveyendo ajustes automáticos de la prioridad de procesos a tu aplicación actualmente en uso, manteniendo al mínimo el tiempo que tu procesador (CPU) trabaja con procesos de fondo.
 - Configuración personalizada del System76-Scheduler con reglas adicionales.
 - Uso del [control de congestión TCP BBR hecho por Google](https://github.com/google/bbr) por defecto.
 - [Input Remapper](https://github.com/sezanzeb/input-remapper) pre-instalado y habilitado. <sub><sup>(Disponible pero desactivado por defecto en la variante Deck, puede ser habilitado ejecutando el siguiente comando en una terminal: `ujust _restore-input-remapper`)</sup></sub>
-- El portal de Bazzite (Bazzite Portal) provee una manera fácil de instalar un sin fin de aplicaciones y ajustes, incluyendo la instalación de [LACT](https://github.com/ilya-zlobintsev/LACT) (para mejor controlar tu GPU de AMD) y [GreenWithEnvy](https://gitlab.com/leinardi/gwe) (para mejor controlar tu GPU de NVIDIA).
+- El portal de AgungOS (AgungOS Portal) provee una manera fácil de instalar un sin fin de aplicaciones y ajustes, incluyendo la instalación de [LACT](https://github.com/ilya-zlobintsev/LACT) (para mejor controlar tu GPU de AMD) y [GreenWithEnvy](https://gitlab.com/leinardi/gwe) (para mejor controlar tu GPU de NVIDIA).
 - [Waydroid](https://waydro.id/) pre-instalado para correr aplicaciones de Android. Para configurarlo, usa esta [guía rápida (en inglés)](https://universal-blue.discourse.group/docs?topic=32).
 - Administra tus aplicaciones usando [Flatseal](https://github.com/tchx84/Flatseal), [Warehouse](https://github.com/flattool/warehouse), y [Gear Lever](https://github.com/mijorus/gearlever).
 - Drivers i2c-piix4 y i2c-nct6775 de [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) incluidos para controlar las luces RGB de ciertas tarjetas madre (motherboards).
-- Drivers de [OpenRazer](https://openrazer.github.io) incorporados, Sólo selecciona OpenRazer en el Bazzite Portal o ejecuta el comando `ujust install-openrazer` en una terminal para empezar a usarlos.
-- Reglas para udev de [OpenTabletDriver](https://opentabletdriver.net/) incorporadas, con la suite completa de software siendo instalable usando el Bazzite Portal ó ejecutando el comando `ujust install-opentabletdriver` en una terminal.
+- Drivers de [OpenRazer](https://openrazer.github.io) incorporados, Sólo selecciona OpenRazer en el AgungOS Portal o ejecuta el comando `ujust install-openrazer` en una terminal para empezar a usarlos.
+- Reglas para udev de [OpenTabletDriver](https://opentabletdriver.net/) incorporadas, con la suite completa de software siendo instalable usando el AgungOS Portal ó ejecutando el comando `ujust install-opentabletdriver` en una terminal.
 - Driver [GCAdapter_OC](https://github.com/hannesmann/gcadapter-oc-kmod) para aumentar la frecuencia del reloj (overclocking) del adaptador para el mando de videojuegos del Gamecube de Nintendo para obtener una taza de sondeo (polling rate) de 1000hz.
 - Soporte fuera de la caja para los teclados hechos por [Wooting](https://wooting.io/).
 - Soporte incorporado de las GPU de las familias <sub><sup>(HD 7000)</sup></sub> y Sea Islands <sub><sup>(HD 8000)</sup></sub> de AMD bajo el driver `amdgpu`.
@@ -88,25 +88,25 @@ Bazzite es creado con [ublue-os/main](https://github.com/ublue-os/main) y [ublue
 
 ### Computadoras de Escritorio
 
-Esta variante común/genérica esta disponible como `bazzite`, la cual es adecuada para computadoras de escritorio, esta variante incluye la siguiente característica:
+Esta variante común/genérica esta disponible como `agungos`, la cual es adecuada para computadoras de escritorio, esta variante incluye la siguiente característica:
 
 - Actualizaciones automáticas para el sistema operativo, Flatpaks y más.
 
 > \[!IMPORTANT\]\
-> **Las imágenes de disco (ISOs) pueden descargarse desde nuestra página de lanzamientos (releases) [aquí (en inglés)](https://github.com/ublue-os/bazzite/releases), también puedes encontrar una útil guía de instalación [aquí (en inglés)](https://universal-blue.discourse.group/docs?topic=30).**
+> **Las imágenes de disco (ISOs) pueden descargarse desde nuestra página de lanzamientos (releases) [aquí (en inglés)](https://github.com/Anakagung2009-bit/AgungOS/releases), también puedes encontrar una útil guía de instalación [aquí (en inglés)](https://universal-blue.discourse.group/docs?topic=30).**
 
 Si estas actualmente usando una imagen de Universal Blue, por favor [sigue estas instrucciones (en inglés)](https://universal-blue.org/images/#image-list).
 
 Si deseas cambiar la base (rebase) de una imagen upstream existente de un sistema ostree de Fedora Silverblue/Kinoite a la imagen **para computadoras de escritorio usando una GPU AMD o Intel**, ejecuta el siguiente comando en una terminal:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS:stable
 ```
 
 Si deseas realizar un rebase a la imagen **para computadoras de escritorio con una GPU NVIDIA**, ejecuta el siguiente comando en una terminal:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-nvidia:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-nvidia:stable
 ```
 
 **Para usuarios con Secure Boot habilitado:** Sigue nuestra [documentación para usuarios de Secure Boot](#secure-boot) antes de cambiar la base.
@@ -114,9 +114,9 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-nvidia:sta
 ### Steam Deck/Computadoras para Cine en Casa (HTPCs)
 
 > \[!IMPORTANT\]\
-> Los dispositivos que **NO** son una Steam Deck también pueden utilizar las imágenes `bazzite-deck`, sin embargo tienen que usar una GPU de AMD moderna, se ha confirmado que las GPUs Intel ARC tambien funcionan.
+> Los dispositivos que **NO** son una Steam Deck también pueden utilizar las imágenes `agungos-deck`, sin embargo tienen que usar una GPU de AMD moderna, se ha confirmado que las GPUs Intel ARC tambien funcionan.
 
-Esta variante esta diseñada para usarse como una alternativa de SteamOS en la Steam Deck, e igualmente para proporcionar una experiencia como de consola de videojuegos en HTPCs y otros dispositivos portátiles, disponible como `bazzite-deck`:
+Esta variante esta diseñada para usarse como una alternativa de SteamOS en la Steam Deck, e igualmente para proporcionar una experiencia como de consola de videojuegos en HTPCs y otros dispositivos portátiles, disponible como `agungos-deck`:
 
 - Al arrancar tu dispositivo, inicia directamente en Game Mode, emulando el mismo comportamiento que SteamOS.
 - **Se aplica el servicio `duperemove` automáticamente el cual recorta por mucho el tamaño del directorio compatdata, el directorio usado por Proton para almacenar los prefijos de WINE para correr juegos de Windows en Linux.**
@@ -132,9 +132,9 @@ Esta variante esta diseñada para usarse como una alternativa de SteamOS en la S
 - Opción para instalar [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader), [EmuDeck](https://www.emudeck.com/), [RetroDECK](https://retrodeck.net/), y [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/), ademas de un sin fin de paquetes útiles al momento de instalar el sistema.
 - Un sistema personalizado de actualizaciones que permite que tanto el sistema operativo, los Flatpaks, y más sean actualizables directamente desde la interfaz de Gamemode gracias al poder de [uupd](https://github.com/ublue-os/uupd) y [topgrade](https://github.com/topgrade-rs/topgrade).
 - Soporte incluido para el arranque dual (dual-boot) con Windows, gracias a que se deja intacta la instalación de GRUB por defecto de Fedora.
-- ¿Algo se rompió o dejo de funcionar después de actualizar?, ¡descuida!, puedes fácilmente retroceder a una versión previa de Bazzite, gracias a la función de reversión (rollback) de `rpm-ostree`. Inclusive puedes seleccionar imágenes previas del sistema directamente desde el menú que aparece al arrancar tu dispositivo.
+- ¿Algo se rompió o dejo de funcionar después de actualizar?, ¡descuida!, puedes fácilmente retroceder a una versión previa de AgungOS, gracias a la función de reversión (rollback) de `rpm-ostree`. Inclusive puedes seleccionar imágenes previas del sistema directamente desde el menú que aparece al arrancar tu dispositivo.
 - Steam y Lutris vienen pre-instalados en la imagen como paquetes en capas (layered).
-- La utilidad [Discover Overlay](https://github.com/trigg/Discover) para Discord viene pre-instalada y es lanzada automáticamente tanto en Gamemode como en el escritorio, si Discord esta instalado. [Puedes ver la documentación oficial aquí (en inglés)](https://trigg.github.io/Discover/bazzite).
+- La utilidad [Discover Overlay](https://github.com/trigg/Discover) para Discord viene pre-instalada y es lanzada automáticamente tanto en Gamemode como en el escritorio, si Discord esta instalado. [Puedes ver la documentación oficial aquí (en inglés)](https://trigg.github.io/Discover/agungos).
 - Se incluye ZRAM<sub><sup>(4GB)</sup></sub>, un avanzado sistema de swap ubicado directamente en la memoria RAM, con el algoritmo de compresión de datos LZ4 por defecto.
 - Se incluye el planificador (scheduler) Kyber I/O para prevenir la inanición (starvation) de E/S al instalar juegos o cuando el proceso `duperemove` corre en el fondo.
 - Se aplican los parámetros del kernel de SteamOS.
@@ -145,27 +145,27 @@ Esta variante esta diseñada para usarse como una alternativa de SteamOS en la S
   - La habilidad de utilizar el servidor gráfico X11 en vez de Wayland, si así se desea, tan solo editando `/etc/default/desktop-wayland`.
   - ¿Aplicaste el mod de 32 GB de memoria RAM en tu Steam Deck?, disfruta del doble de la cantidad máxima de VRAM, el cual es aplicado automáticamente. <sup><sub>(Hablando de, ¿crees que podrías compartirnos semejante habilidad para soldar?)</sub></sup>
 - Servicios que son específicos para el hardware de la Steam Deck pueden ser deshabilitados simplemente ejecutando el siguiente comando en una terminal: `ujust disable-deck-services`, algo muy útil cuando tratas de usar esta variante en otras computadoras portátiles o HTPCs.
-- Puedes encontrar más información acerca de las imágenes Steam Deck de Bazzite [aquí](https://universal-blue.discourse.group/docs?topic=37).
+- Puedes encontrar más información acerca de las imágenes Steam Deck de AgungOS [aquí](https://universal-blue.discourse.group/docs?topic=37).
 
 > \[!WARNING\]\
-> **Debido a un bug en upstream, Bazzite no puede ser utilizado por el momento en Steam Decks con solo 64 GB de almacenamiento eMMC. Ampliar tu almacenamiento cambiando el disco interno soluciona este problema.**
+> **Debido a un bug en upstream, AgungOS no puede ser utilizado por el momento en Steam Decks con solo 64 GB de almacenamiento eMMC. Ampliar tu almacenamiento cambiando el disco interno soluciona este problema.**
 
 > \[!IMPORTANT\]\
-> **Las imágenes de disco (ISOs) pueden descargarse desde nuestra página de lanzamientos (releases) [aquí (en inglés)](https://github.com/ublue-os/bazzite/releases), también puedes encontrar una útil guía de instalación [aquí (en inglés)](https://universal-blue.discourse.group/docs?topic=30).**
+> **Las imágenes de disco (ISOs) pueden descargarse desde nuestra página de lanzamientos (releases) [aquí (en inglés)](https://github.com/Anakagung2009-bit/AgungOS/releases), también puedes encontrar una útil guía de instalación [aquí (en inglés)](https://universal-blue.discourse.group/docs?topic=30).**
 
 Si estas actualmente usando una imagen de Universal Blue, por favor [sigue estas instrucciones (en inglés)](https://universal-blue.org/images/#image-list).
 
 Si deseas cambiar la base (rebase) de una imagen upstream existente de un sistema ostree de Fedora Silverblue/Kinoite a la imagen **para Steam Deck/HTPCs**, ejecuta el siguiente comando en una terminal:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-deck:stable
 ```
 
 #### Computadoras handheld alternativas
 
 **Igualmente, asegurate de tambien leer la [documentación de HHD (en inglés)](https://github.com/hhd-dev/hhd#after-install), algunas computadoras Handheld requieren ciertos ajustes o tweaks especificos para funcionar correctamente.**
 
-Tambien incluimos ciertos comandos de `ujust` para instalar varios temas para [CSS Loader](https://docs.deckthemes.com/CSSLoader/Install/#linux-or-steam-deck) que no estan disponibles en su propia tienda. Si instalas estos temas, estos tambien serán actualizados automáticamente junto con Bazzite.
+Tambien incluimos ciertos comandos de `ujust` para instalar varios temas para [CSS Loader](https://docs.deckthemes.com/CSSLoader/Install/#linux-or-steam-deck) que no estan disponibles en su propia tienda. Si instalas estos temas, estos tambien serán actualizados automáticamente junto con AgungOS.
 
 ### GNOME
 
@@ -179,27 +179,27 @@ Las sub-variantes con el entorno de escritorio GNOME están disponibles tanto pa
 - Actualizaciones automáticas para el [tema de GNOME para Firefox](https://github.com/rafaelmardojai/firefox-gnome-theme) y el [tema de GNOME para Thunderbird](https://github.com/rafaelmardojai/thunderbird-gnome-theme). <sup><sub>(Si se encuentran instalados)</sub></sup>
 
 > \[!IMPORTANT\]\
-> \**Las imágenes de disco (ISOs) pueden descargarse desde nuestra página de lanzamientos (releases) [aquí (en inglés)](https://github.com/ublue-os/bazzite/releases), también puedes encontrar una útil guía de instalación [aquí (en inglés)](https://universal-blue.discourse.group/docs?topic=30).**
+> \**Las imágenes de disco (ISOs) pueden descargarse desde nuestra página de lanzamientos (releases) [aquí (en inglés)](https://github.com/Anakagung2009-bit/AgungOS/releases), también puedes encontrar una útil guía de instalación [aquí (en inglés)](https://universal-blue.discourse.group/docs?topic=30).**
 
 Si deseas cambiar la base (rebase) a la imagen **para computadoras de escritorio con una GPU AMD ó Intel**, ejecuta el siguiente comando en una terminal:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-gnome:stable
 ```
 
 Si deseas realizar un rebase a la imagen **para computadoras de escritorio con una GPU NVIDIA**, ejecuta el siguiente comando en una terminal:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome-nvidia:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-gnome-nvidia:stable
 ```
 
 > \[!WARNING\]\
-> **Debido a un bug en upstream, Bazzite no puede ser utilizado por el momento en Steam Decks con solo 64 GB de almacenamiento eMMC. Ampliar tu almacenamiento cambiando el disco interno soluciona este problema.**
+> **Debido a un bug en upstream, AgungOS no puede ser utilizado por el momento en Steam Decks con solo 64 GB de almacenamiento eMMC. Ampliar tu almacenamiento cambiando el disco interno soluciona este problema.**
 
 Si necesitas realizar un rebase a la imagen **para Steam Deck/HTPC con GPUs AMD modernas ó Intel ARC**, ejecuta el siguiente comando en una terminal:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-deck-gnome:stable
 ```
 **Para usuarios con Secure Boot habilitado:** Sigue nuestra [documentación para usuarios de Secure Boot](#secure-boot) antes de cambiar la base.
 
@@ -211,7 +211,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome
 - Flathub se encuentra habilitado por defecto.
 - Lanzador de comandos [`ujust`](https://github.com/casey/just) incluido, con diversos comandos muy convenientes.
 - Codecs multimedia fuera de la caja.
-- Revierte tu instalación de Bazzite desde cualquier versión dentro de los últimos 90 días.
+- Revierte tu instalación de AgungOS desde cualquier versión dentro de los últimos 90 días.
 
 #### Características de Fedora Linux (Kinoite & Silverblue)
 
@@ -224,15 +224,15 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome
 
 ## ¿Por qué?
 
-Bazzite inicio como un proyecto para resolver los problemas que plagan SteamOS, principalmente los paquetes desactualizados (a pesar de estar basado en Arch Linux) y la carencia de un gestor de paquetes funcional.
+AgungOS inicio como un proyecto para resolver los problemas que plagan SteamOS, principalmente los paquetes desactualizados (a pesar de estar basado en Arch Linux) y la carencia de un gestor de paquetes funcional.
 
-A pesar que este proyecto también esta basado en imágenes, tienes la capacidad de instalar **cualquier** paquete de Fedora, directamente desde la terminal. Estos paquetes persistirán a través de las actualizaciones  <sub><sup>(Así que descuida, tu instala ese oscuro software de VPN con el que pasaste una hora y múltiples migrañas tratando de hacer funcionar en SteamOS)</sup></sub>. Ademas, Bazzite es actualizado múltiples veces a la semana con paquetes del upstream de Fedora, dándote el mejor rendimiento posible y las últimas características - todo con una base sólida y estable.
+A pesar que este proyecto también esta basado en imágenes, tienes la capacidad de instalar **cualquier** paquete de Fedora, directamente desde la terminal. Estos paquetes persistirán a través de las actualizaciones  <sub><sup>(Así que descuida, tu instala ese oscuro software de VPN con el que pasaste una hora y múltiples migrañas tratando de hacer funcionar en SteamOS)</sup></sub>. Ademas, AgungOS es actualizado múltiples veces a la semana con paquetes del upstream de Fedora, dándote el mejor rendimiento posible y las últimas características - todo con una base sólida y estable.
 
-Bazzite se entrega con el kernel de Linux mas nuevo y SELinux esta habilitado por defecto con soporte completo de Secure Boot <sub><sup>(Ejecuta el comando `ujust enroll-secure-boot-key` en una terminal e introduce la contraseña  `universalblue` si es requerido para registrar nuestra llave de seguridad)</sup></sub>, además de soporte para la encriptación completa de tu disco, lo que convierte a Bazzite una opción razonable para la informática general. <sup><sub>(Así es, puedes mandar a imprimir el último reporte financiero de tu empresa con Bazzite)</sub></sup>
+AgungOS se entrega con el kernel de Linux mas nuevo y SELinux esta habilitado por defecto con soporte completo de Secure Boot <sub><sup>(Ejecuta el comando `ujust enroll-secure-boot-key` en una terminal e introduce la contraseña  `universalblue` si es requerido para registrar nuestra llave de seguridad)</sup></sub>, además de soporte para la encriptación completa de tu disco, lo que convierte a AgungOS una opción razonable para la informática general. <sup><sub>(Así es, puedes mandar a imprimir el último reporte financiero de tu empresa con AgungOS)</sub></sup>
 
-Lee nuestras [preguntas frecuentes](https://universal-blue.discourse.group/docs?topic=411) para saber más en lo que hace a Bazzite sobresalir de otras distribuciones de GNU Linux.
+Lee nuestras [preguntas frecuentes](https://universal-blue.discourse.group/docs?topic=411) para saber más en lo que hace a AgungOS sobresalir de otras distribuciones de GNU Linux.
 
-## Mira como luce Bazzite (Capturas de Pantalla)
+## Mira como luce AgungOS (Capturas de Pantalla)
 
 ![KDE Vapor Theme](/repo_content/desktop1.png?raw=true "KDE Vapor Theme")
 
@@ -254,16 +254,16 @@ Lee nuestras [preguntas frecuentes](https://universal-blue.discourse.group/docs?
 - [Guía para Jugar en Linux](https://universal-blue.discourse.group/docs?topic=31)
 - [Guía para Configurar el Arranque Dual con Windows (Dual Boot)](https://universal-blue.discourse.group/docs?topic=129)
 
-Puedes encontrar documentación adicional relacionada al proyecto [aquí](http://docs.bazzite.gg/).
+Puedes encontrar documentación adicional relacionada al proyecto [aquí](http://docs.agungos.gg/).
 
-Checa nuestros [boletines informativos (disponibles en español](https://universal-blue.discourse.group/tag/bazzite-buzz), estos son publicados regularmente y los cuales hablan de las últimas actualizaciones del proyecto.
+Checa nuestros [boletines informativos (disponibles en español](https://universal-blue.discourse.group/tag/agungos-buzz), estos son publicados regularmente y los cuales hablan de las últimas actualizaciones del proyecto.
 
 ## Verificación
 
 Estas imágenes son firmadas digitalmente con [cosign](https://docs.sigstore.dev/cosign/signing/overview/) de Sigstore. Para verificar la firma digital manualmente, primero tienes que descargar la llave `cosign.pub` directamente de este repositorio, y después, ejecuta el siguiente comando en una terminal:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/ublue-os/bazzite
+cosign verify --key cosign.pub ghcr.io/Anakagung2009-bit/AgungOS
 ```
 
 ## Arranque Seguro (Secure Boot)
@@ -271,9 +271,9 @@ cosign verify --key cosign.pub ghcr.io/ublue-os/bazzite
 > [!WARNING]
 > **Usuarios de la Steam Deck: La Steam Deck no viene con Arranque Seguro habilitado y no viene con ninguna llave registrada por defecto. No habilites esto a menos que estes seguro de lo que estes haciendo.**
 
-El Arranque Seguro (Secure Boot) tiene soporte gracias a nuestra llave digital personalizada. La llave pública puede encontrarse en la raíz de [este](https://github.com/ublue-os/bazzite/blob/main/secure_boot.der) repositorio.
+El Arranque Seguro (Secure Boot) tiene soporte gracias a nuestra llave digital personalizada. La llave pública puede encontrarse en la raíz de [este](https://github.com/Anakagung2009-bit/AgungOS/blob/main/secure_boot.der) repositorio.
 
-Si gustas registrar esta llave antes de instalar Bazzite, descarga la llave y ejecuta el siguiente comando en una terminal:
+Si gustas registrar esta llave antes de instalar AgungOS, descarga la llave y ejecuta el siguiente comando en una terminal:
 
 ```bash
 sudo mokutil --timeout -1
@@ -285,21 +285,21 @@ Si se te pide una contraseña, introduce `universalblue`.
 
 ## Métricas de Contribución
 
-![Bazzite](https://repobeats.axiom.co/api/embed/86b500d79c613015ad16f56df76c8e13f3fd98ae.svg "Repobeats analytics image")
+![AgungOS](https://repobeats.axiom.co/api/embed/86b500d79c613015ad16f56df76c8e13f3fd98ae.svg "Repobeats analytics image")
 
 ## Historial de Estrellas
 
-<a href="https://star-history.com/#ublue-os/bazzite&Date">
+<a href="https://star-history.com/#Anakagung2009-bit/AgungOS&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ublue-os/bazzite&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ublue-os/bazzite&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ublue-os/bazzite&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Anakagung2009-bit/AgungOS&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Anakagung2009-bit/AgungOS&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Anakagung2009-bit/AgungOS&type=Date" />
   </picture>
 </a>
 
 ## Gracias Especiales
 
-Bazzite es producto de esfuerzo comunitario, y no existiría sin la contribución de todos. A continuación, están listadas unas cuantas personas que nos han ayudado a lo largo del camino:
+AgungOS es producto de esfuerzo comunitario, y no existiría sin la contribución de todos. A continuación, están listadas unas cuantas personas que nos han ayudado a lo largo del camino:
 
 - [amelia.svg](https://bsky.app/profile/ameliasvg.bsky.social) - Por crear nuestro logo, y en general, nuestro branding.
 - [SuperRiderTH](https://github.com/SuperRiderTH) - Por crear nuestro lindo video de arranque al iniciar el Game Mode de Steam.
@@ -308,21 +308,21 @@ Bazzite es producto de esfuerzo comunitario, y no existiría sin la contribució
 - [Jovian-NixOS](https://github.com/Jovian-Experiments) - Por brindarnos su soporte con problemas técnicos y por crear un proyecto similar. ¡En serio!, [chécalo](https://github.com/Jovian-Experiments/Jovian-NixOS), es nuestro primo basado en Nix.
 - [sentry](https://copr.fedorainfracloud.org/coprs/sentry/) - Por su asistencia con unos parches necesarios en el kernel, y por crear el repositorio [kernel-fsync repo](https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/) que usamos actualmente.
 - [nicknamenamenick](https://github.com/nicknamenamenick) - Por ser el MVP, ya que casi por si solo, mantiene toda nuestra documentación general y de soporte, ademas de los innumerables casos donde ayuda a nuestros usuarios.
-- [Steam Deck Homebrew](https://deckbrew.xyz) - Por escoger brindar soporte a otras distribuciones ademas de SteamOS, a pesar de todo el trabajo extra que esto conlleva, y damos gracias especiales a [PartyWumpus](https://github.com/PartyWumpus) por lograr que Decky Loader funcione con SELinux en Bazzite.
-- [cyrv6737](https://github.com/cyrv6737) - Por la inspiración inicial para crear el proyecto, y la base que eventualmente se volvió [bazzite-arch](https://github.com/ublue-os/bazzite-arch).
+- [Steam Deck Homebrew](https://deckbrew.xyz) - Por escoger brindar soporte a otras distribuciones ademas de SteamOS, a pesar de todo el trabajo extra que esto conlleva, y damos gracias especiales a [PartyWumpus](https://github.com/PartyWumpus) por lograr que Decky Loader funcione con SELinux en AgungOS.
+- [cyrv6737](https://github.com/cyrv6737) - Por la inspiración inicial para crear el proyecto, y la base que eventualmente se volvió [agungos-arch](https://github.com/Anakagung2009-bit/AgungOS-arch).
 
 ## Hazlo tu Mismo
 
-Bazzite esta construido enteramente en GitHub, y crear tu propia versión personalizada es muy fácil, tan solo crea un fork de este repositorio, añade tu propia llave digital privada, y habilita las acciones de GitHub.
+AgungOS esta construido enteramente en GitHub, y crear tu propia versión personalizada es muy fácil, tan solo crea un fork de este repositorio, añade tu propia llave digital privada, y habilita las acciones de GitHub.
 
 [Familiarízate](https://docs.github.com/en/actions/security-guides/encrypted-secrets) en como mantener secretos en GitHub. Necesitaras [generar tus nuevas pares de claves](https://docs.sigstore.dev/cosign/signing/overview/) con cosign. La llave digital pública puede ubicarse en tu repositorio público <sub><sup>(Tus usuarios van a necesitar verificar las firmas digitales.)</sup></sub>, y puedes pegar tu llave digital privada en `Settings -> Secrets -> Actions` con el nombre `SIGNING_SECRET`.
 
-También incluimos una configuración para la popular app de GitHub [Pull](https://github.com/apps/pull), por si gustas mantener tu fork en sincronía con el upstream. Habilita esta aplicación en tu repositorio para realizar un seguimiento de los cambios en Bazzite, mientras al mismo tiempo, haces tus propias modificaciones.
+También incluimos una configuración para la popular app de GitHub [Pull](https://github.com/apps/pull), por si gustas mantener tu fork en sincronía con el upstream. Habilita esta aplicación en tu repositorio para realizar un seguimiento de los cambios en AgungOS, mientras al mismo tiempo, haces tus propias modificaciones.
 
 ## Únete a la Comunidad
 
 Puedes encontrarnos en el [Discord de Universal Blue (en inglés)](https://discord.gg/f8MUghG5PB) y puedes ver todo el archivo de los hilos de ayuda en nuestro [Answer Overflow](https://www.answeroverflow.com/c/1072614816579063828/1143023993041993769).
 
-Discute y crea guias para los usuarios en nuestro [foro de Discourse de Universal Blue Discourse (en inglés)](https://universal-blue.discourse.group/c/bazzite/5).
+Discute y crea guias para los usuarios en nuestro [foro de Discourse de Universal Blue Discourse (en inglés)](https://universal-blue.discourse.group/c/agungos/5).
 
 Sigue a Universal Blue en [Mastodon](https://fosstodon.org/@UniversalBlue).

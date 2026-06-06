@@ -18,12 +18,12 @@ alias changelog := changelogs
 [group("system")]
 changelogs:
     #!/usr/bin/bash
-    CONTENT=$(curl -s https://api.github.com/repos/ublue-os/bazzite/releases/latest | jq -r '.body')
+    CONTENT=$(curl -s https://api.github.com/repos/Anakagung2009-bit/AgungOS/releases/latest | jq -r '.body')
       echo "$CONTENT" | glow -
 
 # Show the testing (pre-release) changelog
 [group("system")]
 changelogs-testing:
     #!/usr/bin/bash
-    CONTENT=$(curl -s https://api.github.com/repos/ublue-os/bazzite/releases | jq -r 'map(select(.prerelease)) | .[0].body')
+    CONTENT=$(curl -s https://api.github.com/repos/Anakagung2009-bit/AgungOS/releases | jq -r 'map(select(.prerelease)) | .[0].body')
        echo "$CONTENT" | glow -

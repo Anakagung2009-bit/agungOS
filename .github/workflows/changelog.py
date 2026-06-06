@@ -8,15 +8,15 @@ from typing import Any
 import re
 from collections import defaultdict
 
-REGISTRY = "ghcr.io/ublue-os/"
+REGISTRY = "ghcr.io/Anakagung2009-bit/"
 
 IMAGES = [
-    "bazzite",
-    "bazzite-gnome",
-    "bazzite-nvidia",
-    "bazzite-gnome-nvidia",
-    "bazzite-nvidia-open",
-    "bazzite-gnome-nvidia-open",
+    "agungos",
+    "agungos-gnome",
+    "agungos-nvidia",
+    "agungos-gnome-nvidia",
+    "agungos-nvidia-open",
+    "agungos-gnome-nvidia-open",
 ]
 
 RETRIES = 3
@@ -43,7 +43,7 @@ OTHER_NAMES = {
 COMMITS_FORMAT = (
     "### Commits\n| Hash | Subject | Author |\n| --- | --- | --- |{commits}\n\n"
 )
-COMMIT_FORMAT = "\n| **[{short}](https://github.com/ublue-os/bazzite/commit/{hash})** | {subject} | {author} |"
+COMMIT_FORMAT = "\n| **[{short}](https://github.com/Anakagung2009-bit/AgungOS/commit/{hash})** | {subject} | {author} |"
 
 CHANGELOG_TITLE = "{tag}: {pretty}"
 CHANGELOG_FORMAT = """\
@@ -70,9 +70,9 @@ From previous `{target}` version `{prev}` there have been the following changes.
 For current users, type the following to rebase to this version:
 ```bash
 # For this branch (if latest):
-bazzite-rollback-helper rebase {target}
+agungos-rollback-helper rebase {target}
 # For this specific image:
-bazzite-rollback-helper rebase {curr}
+agungos-rollback-helper rebase {curr}
 ```
 """
 HANDWRITTEN_PLACEHOLDER = """\

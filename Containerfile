@@ -19,7 +19,7 @@
 #          ###################
 #              ###########
 #
-# Welcome to Bazzite! If you're looking to
+# Welcome to AgungOS! If you're looking to
 # build your own, we highly recommend you
 # use our custom image template. Forking
 # the main repo provides more control, but
@@ -31,17 +31,17 @@ ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME:-kinoite}"
 ARG FEDORA_VERSION="${FEDORA_VERSION:-44}"
 ARG ARCH="${ARCH:-x86_64}"
 
-ARG BASE_IMAGE="${BASE_IMAGE:-ghcr.io/ublue-os/${BASE_IMAGE_NAME}-main:${FEDORA_VERSION}}"
-ARG NVIDIA_BASE="${NVIDIA_BASE:-bazzite}"
+ARG BASE_IMAGE="${BASE_IMAGE:-ghcr.io/Anakagung2009-bit/${BASE_IMAGE_NAME}-main:${FEDORA_VERSION}}"
+ARG NVIDIA_BASE="${NVIDIA_BASE:-agungos}"
 ARG KERNEL_FLAVOR="${KERNEL_FLAVOR:-ogc}"
 ARG KERNEL_VERSION="${KERNEL_VERSION:-7.0.9-ogc3.2.fc44.x86_64}"
 ARG NVIDIA_FLAVOR="${NVIDIA_FLAVOR:-nvidia-open}"
 ARG LINUX_CEC_REF="218fd8194fbf2641b1646ed44d69ef76eb6c57fd"
 ARG INPUTATTACH_CEC_UNITS_REF="cbd910971a6712a7aa6c5e7f5714fd0a4bffc417"
 
-FROM ghcr.io/ublue-os/akmods:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods
-FROM ghcr.io/ublue-os/akmods-extra:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods-extra
-FROM ghcr.io/ublue-os/akmods-${NVIDIA_FLAVOR}:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods-nvidia
+FROM ghcr.io/Anakagung2009-bit/akmods:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods
+FROM ghcr.io/Anakagung2009-bit/akmods-extra:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods-extra
+FROM ghcr.io/Anakagung2009-bit/akmods-${NVIDIA_FLAVOR}:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods-nvidia
 
 FROM scratch AS ctx
 COPY build_files /
@@ -88,9 +88,9 @@ RUN dnf5 -y install \
 # DESKTOP BUILDS
 ################
 
-FROM ${BASE_IMAGE} AS bazzite
+FROM ${BASE_IMAGE} AS agungos
 
-ARG IMAGE_NAME="${IMAGE_NAME:-bazzite}"
+ARG IMAGE_NAME="${IMAGE_NAME:-agungos}"
 ARG IMAGE_VENDOR="${IMAGE_VENDOR:-ublue-os}"
 ARG IMAGE_BRANCH="${IMAGE_BRANCH:-stable}"
 ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME:-kinoite}"
@@ -109,13 +109,13 @@ RUN --mount=type=bind,src=firmware,dst=/ctx/firmware \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     cp -a /ctx/firmware/. /tmp/firmware && \
-    find /tmp/firmware -type f -exec setfattr -n user.component -v "bazzite-nonfree" {} + && \
+    find /tmp/firmware -type f -exec setfattr -n user.component -v "agungos-nonfree" {} + && \
     rm -rf /tmp/firmware/.git && \
     cp -a /tmp/firmware/. / && \
     rm -rf /tmp/firmware
 
 # Copy Homebrew files from the brew image
-ARG BREW_IMAGE=ghcr.io/ublue-os/brew:latest@sha256:ca91068f51ce663d495ccfc829352d6621ec95f6c7db447ade55023b222f9762
+ARG BREW_IMAGE=ghcr.io/Anakagung2009-bit/brew:latest@sha256:ca91068f51ce663d495ccfc829352d6621ec95f6c7db447ade55023b222f9762
 COPY --from=${BREW_IMAGE} /system_files/ /tmp/brew_files/
 RUN find /tmp/brew_files -type f -printf '/%P\0' > /tmp/brew_list.txt && \
     cp -a /tmp/brew_files/. / && \
@@ -144,8 +144,8 @@ RUN --mount=type=cache,dst=/var/cache \
     mkdir -p /var/roothome && \
     dnf5 config-manager setopt keepcache=1 && \
     for copr in \
-        ublue-os/bazzite \
-        ublue-os/bazzite-multilib \
+        Anakagung2009-bit/AgungOS \
+        Anakagung2009-bit/AgungOS-multilib \
         ublue-os/staging \
         ublue-os/packages \
         ycollet/audinux \
@@ -160,7 +160,7 @@ RUN --mount=type=cache,dst=/var/cache \
     sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/negativo17-fedora-multimedia.repo && \
     dnf5 -y config-manager setopt "*terra*".priority=1 "*terra*".exclude="nerd-fonts scx-tools scx-scheds python3-protobuf zlib-devel uupd" && \
     dnf5 -y config-manager setopt "terra-mesa".enabled=false && \
-    dnf5 -y config-manager setopt "*bazzite*".priority=2 && \
+    dnf5 -y config-manager setopt "*agungos*".priority=2 && \
     eval "$(/ctx/dnf5-setopt setopt '*negativo17*' priority=4 exclude='mesa-* *xone*')" && \
     dnf5 -y config-manager setopt "*fedora*".exclude="mesa-* kernel-core-* kernel-modules-* kernel-uki-virt-* steam" && \
     dnf5 -y config-manager setopt "*audinux*".exclude="kernel*" && \
@@ -178,8 +178,8 @@ RUN --mount=type=cache,dst=/var/cache \
         pipewire-config-raop \
         mesa-va-drivers && \
     declare -A toswap=( \
-        ["copr:copr.fedorainfracloud.org:ublue-os:bazzite"]="wireplumber" \
-        ["copr:copr.fedorainfracloud.org:ublue-os:bazzite-multilib"]="bluez xorg-x11-server-Xwayland" \
+        ["copr:copr.fedorainfracloud.org:ublue-os:agungos"]="wireplumber" \
+        ["copr:copr.fedorainfracloud.org:ublue-os:agungos-multilib"]="bluez xorg-x11-server-Xwayland" \
         ["terra-mesa"]="mesa-filesystem" \
         ["copr:copr.fedorainfracloud.org:ublue-os:staging"]="fwupd" \
     ) && \
@@ -332,7 +332,7 @@ RUN --mount=type=cache,dst=/var/cache \
         cage \
         wlr-randr \
         gmodpatchtool \
-        bazzite-portal \
+        agungos-portal \
         ls-iommu && \
     ln -s /dev/null /etc/NetworkManager/dispatcher.d/04-iscsi && \
     systemctl mask iscsi && \
@@ -404,7 +404,7 @@ RUN --mount=type=cache,dst=/var/cache \
     --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     --mount=type=secret,id=GITHUB_TOKEN \
-    /ctx/ghcurl "$(/ctx/ghcurl "https://api.github.com/repos/ublue-os/bazzite-ujust-picker/releases/latest" -s | jq -r '.assets[] | select(.name | test("x86_64$")) | .browser_download_url')" -sL -o /usr/bin/ujust-picker && \
+    /ctx/ghcurl "$(/ctx/ghcurl "https://api.github.com/repos/Anakagung2009-bit/AgungOS-ujust-picker/releases/latest" -s | jq -r '.assets[] | select(.name | test("x86_64$")) | .browser_download_url')" -sL -o /usr/bin/ujust-picker && \
     chmod +x /usr/bin/ujust-picker && \
     setfattr -n user.component -v "ujust-picker" /usr/bin/ujust-picker && \
     /ctx/cleanup
@@ -460,12 +460,12 @@ RUN --mount=type=cache,dst=/var/cache \
             kcharselect \
             kde-partitionmanager \
             plasma-discover && \
-        sed -i '$r /usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/bazzite-pins.js' /usr/share/plasma/layout-templates/org.kde.plasma.desktop.defaultPanel/contents/layout.js && \
+        sed -i '$r /usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/agungos-pins.js' /usr/share/plasma/layout-templates/org.kde.plasma.desktop.defaultPanel/contents/layout.js && \
         ln -sf /usr/share/wallpapers/convergence.jxl /usr/share/backgrounds/default.jxl && \
         ln -sf /usr/share/wallpapers/convergence.jxl /usr/share/backgrounds/default-dark.jxl && \
         rm -f /usr/share/backgrounds/default.xml && \
-        mkdir -p /usr/share/wallpapers/bazzite/convergence/contents/images && \
-        ln -s /usr/share/wallpapers/convergence.jxl /usr/share/wallpapers/bazzite/convergence/contents/images/3940x2160.jxl \
+        mkdir -p /usr/share/wallpapers/agungos/convergence/contents/images && \
+        ln -s /usr/share/wallpapers/convergence.jxl /usr/share/wallpapers/agungos/convergence/contents/images/3940x2160.jxl \
     ; else \
         dnf5 -y install \
             nautilus-gsconnect \
@@ -522,49 +522,49 @@ RUN --mount=type=cache,dst=/var/cache \
     mkdir -p /var/tmp && chmod 1777 /var/tmp && \
     cp --no-dereference --preserve=links /usr/lib/libdrm.so.2 /usr/lib/libdrm.so && \
     cp --no-dereference --preserve=links /usr/lib64/libdrm.so.2 /usr/lib64/libdrm.so && \
-    sed -i 's@/usr/bin/steam@/usr/bin/bazzite-steam@g' /usr/share/applications/steam.desktop && \
-    sed -i 's@Exec=steam steam://open/bigpicture@Exec=/usr/bin/bazzite-steam-bpm@g' /usr/share/applications/steam.desktop && \
+    sed -i 's@/usr/bin/steam@/usr/bin/agungos-steam@g' /usr/share/applications/steam.desktop && \
+    sed -i 's@Exec=steam steam://open/bigpicture@Exec=/usr/bin/agungos-steam-bpm@g' /usr/share/applications/steam.desktop && \
     sed -i 's|^Exec=lutris %U$|Exec=env PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python lutris %U|' /usr/share/applications/net.lutris.Lutris.desktop && \
     mkdir -p /etc/skel/.config/autostart/ && \
     cp "/usr/share/applications/steam.desktop" "/etc/skel/.config/autostart/steam.desktop" && \
-    sed -i 's@/usr/bin/bazzite-steam %U@/usr/bin/bazzite-steam -silent %U@g' /etc/skel/.config/autostart/steam.desktop && \
+    sed -i 's@/usr/bin/agungos-steam %U@/usr/bin/agungos-steam -silent %U@g' /etc/skel/.config/autostart/steam.desktop && \
     sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/nvtop.desktop && \
     sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/btop.desktop && \
     sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/yad-icon-browser.desktop && \
     sed -i 's/#UserspaceHID.*/UserspaceHID=true/' /etc/bluetooth/input.conf && \
     sed -i "s|grub_probe\} --target=device /\`|grub_probe} --target=device /sysroot\`|g" /usr/bin/grub2-mkconfig && \
     rm -f /usr/lib/systemd/system/service.d/50-keep-warm.conf && \
-    echo "import \"/usr/share/ublue-os/just/80-bazzite.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/81-bazzite-fixes.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/82-bazzite-apps.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/82-bazzite-cockpit.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/82-bazzite-beesd.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/82-bazzite-sunshine.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/82-bazzite-waydroid.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/83-bazzite-audio.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/85-bazzite-image.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/84-bazzite-virt.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/86-bazzite-windows.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/87-bazzite-framegen.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/88-bazzite-webapps.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/89-bazzite-mesa-git.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/90-bazzite-picker.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/90-bazzite-de.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/91-bazzite-decky.just\"" >> /usr/share/ublue-os/justfile && \
-    echo "import \"/usr/share/ublue-os/just/92-bazzite-verify.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/80-agungos.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/81-agungos-fixes.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/82-agungos-apps.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/82-agungos-cockpit.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/82-agungos-beesd.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/82-agungos-sunshine.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/82-agungos-waydroid.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/83-agungos-audio.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/85-agungos-image.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/84-agungos-virt.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/86-agungos-windows.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/87-agungos-framegen.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/88-agungos-webapps.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/89-agungos-mesa-git.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/90-agungos-picker.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/90-agungos-de.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/91-agungos-decky.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/92-agungos-verify.just\"" >> /usr/share/ublue-os/justfile && \
     if grep -q "silverblue" <<< "${BASE_IMAGE_NAME}"; then \
         mkdir -p "/usr/share/ublue-os/dconfs/desktop-silverblue/" && \
-        cp "/usr/share/glib-2.0/schemas/zz0-"*"-bazzite-desktop-silverblue-"*".gschema.override" "/usr/share/ublue-os/dconfs/desktop-silverblue/" && \
+        cp "/usr/share/glib-2.0/schemas/zz0-"*"-agungos-desktop-silverblue-"*".gschema.override" "/usr/share/ublue-os/dconfs/desktop-silverblue/" && \
         find "/etc/dconf/db/distro.d/" -maxdepth 1 -type f -exec cp {} "/usr/share/ublue-os/dconfs/desktop-silverblue/" \; && \
-        dconf-override-converter to-dconf "/usr/share/ublue-os/dconfs/desktop-silverblue/zz0-"*"-bazzite-desktop-silverblue-"*".gschema.override" && \
-        sed -i 's/\[org.gtk.Settings.FileChooser\]/\[org\/gtk\/settings\/file-chooser\]/g; s/\[org.gtk.gtk4.Settings.FileChooser\]/\[org\/gtk\/gtk4\/settings\/file-chooser\]/g' "/usr/share/ublue-os/dconfs/desktop-silverblue/zz0-00-bazzite-desktop-silverblue-global" && \
-        rm "/usr/share/ublue-os/dconfs/desktop-silverblue/zz0-"*"-bazzite-desktop-silverblue-"*".gschema.override" && \
-        mkdir -p /tmp/bazzite-schema-test && \
-        find "/usr/share/glib-2.0/schemas/" -type f ! -name "*.gschema.override" -exec cp {} "/tmp/bazzite-schema-test/" \; && \
-        cp "/usr/share/glib-2.0/schemas/zz0-"*".gschema.override" "/tmp/bazzite-schema-test/" && \
-        glib-compile-schemas --strict /tmp/bazzite-schema-test && \
+        dconf-override-converter to-dconf "/usr/share/ublue-os/dconfs/desktop-silverblue/zz0-"*"-agungos-desktop-silverblue-"*".gschema.override" && \
+        sed -i 's/\[org.gtk.Settings.FileChooser\]/\[org\/gtk\/settings\/file-chooser\]/g; s/\[org.gtk.gtk4.Settings.FileChooser\]/\[org\/gtk\/gtk4\/settings\/file-chooser\]/g' "/usr/share/ublue-os/dconfs/desktop-silverblue/zz0-00-agungos-desktop-silverblue-global" && \
+        rm "/usr/share/ublue-os/dconfs/desktop-silverblue/zz0-"*"-agungos-desktop-silverblue-"*".gschema.override" && \
+        mkdir -p /tmp/agungos-schema-test && \
+        find "/usr/share/glib-2.0/schemas/" -type f ! -name "*.gschema.override" -exec cp {} "/tmp/agungos-schema-test/" \; && \
+        cp "/usr/share/glib-2.0/schemas/zz0-"*".gschema.override" "/tmp/agungos-schema-test/" && \
+        glib-compile-schemas --strict /tmp/agungos-schema-test && \
         glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null && \
-        rm -r /tmp/bazzite-schema-test \
+        rm -r /tmp/agungos-schema-test \
     ; fi && \
     sed -i 's/stage/none/g' /etc/rpm-ostreed.conf && \
     for repo in \
@@ -577,8 +577,8 @@ RUN --mount=type=cache,dst=/var/cache \
     do \
         sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/$repo.repo; \
     done && for copr in \
-        ublue-os/bazzite \
-        ublue-os/bazzite-multilib \
+        Anakagung2009-bit/AgungOS \
+        Anakagung2009-bit/AgungOS-multilib \
         ublue-os/staging \
         ublue-os/packages \
         ycollet/audinux \
@@ -588,10 +588,10 @@ RUN --mount=type=cache,dst=/var/cache \
     done && unset -v copr && \
     eval "$(/ctx/dnf5-setopt setopt '*negativo17*' enabled=0)" && \
     sed -i 's#/var/lib/selinux#/etc/selinux#g' /usr/lib/python3.*/site-packages/setroubleshoot/util.py && \
-    sed -i 's/power-saver=powersave$/power-saver=powersave-bazzite/' /etc/tuned/ppd.conf && \
-    sed -i 's/balanced=balanced$/balanced=balanced-bazzite/' /etc/tuned/ppd.conf && \
-    sed -i 's/performance=throughput-performance$/performance=throughput-performance-bazzite/' /etc/tuned/ppd.conf && \
-    sed -i 's/balanced=balanced-battery$/balanced=balanced-battery-bazzite\npower-saver=powersave-battery-bazzite/' /etc/tuned/ppd.conf && \
+    sed -i 's/power-saver=powersave$/power-saver=powersave-agungos/' /etc/tuned/ppd.conf && \
+    sed -i 's/balanced=balanced$/balanced=balanced-agungos/' /etc/tuned/ppd.conf && \
+    sed -i 's/performance=throughput-performance$/performance=throughput-performance-agungos/' /etc/tuned/ppd.conf && \
+    sed -i 's/balanced=balanced-battery$/balanced=balanced-battery-agungos\npower-saver=powersave-battery-agungos/' /etc/tuned/ppd.conf && \
     ln -s /usr/bin/true /usr/bin/pulseaudio && \
     mkdir -p /etc/flatpak/remotes.d && \
     curl --retry 3 -Lo /etc/flatpak/remotes.d/flathub.flatpakrepo https://dl.flathub.org/repo/flathub.flatpakrepo && \
@@ -599,22 +599,22 @@ RUN --mount=type=cache,dst=/var/cache \
     systemctl disable fw-fanctrl.service && \
     systemctl disable scx_loader.service && \
     systemctl enable input-remapper.service && \
-    systemctl enable bazzite-flatpak-manager.service && \
+    systemctl enable agungos-flatpak-manager.service && \
     systemctl disable rpm-ostreed-automatic.timer && \
     systemctl enable uupd.timer && \
     systemctl enable incus-workaround.service && \
-    systemctl enable bazzite-hardware-setup.service && \
+    systemctl enable agungos-hardware-setup.service && \
     systemctl disable tailscaled.service && \
     systemctl enable dev-hugepages1G.mount && \
     systemctl enable ds-inhibit.service && \
-    systemctl --global enable bazzite-user-setup.service && \
+    systemctl --global enable agungos-user-setup.service && \
     systemctl --global enable podman.socket && \
     systemctl --global enable systemd-tmpfiles-setup.service && \
     systemctl disable waydroid-container.service && \
     systemctl enable greenboot-healthcheck.service && \
     systemctl enable greenboot-set-rollback-trigger.service && \
     systemctl disable force-wol.service && \
-    systemctl --global enable bazzite-dynamic-fixes.service && \
+    systemctl --global enable agungos-dynamic-fixes.service && \
     systemctl --global enable ntfs-nag.service && \
     systemctl enable dmemcg-booster-system.service && \
     systemctl --global enable dmemcg-booster-user.service && \
@@ -638,9 +638,9 @@ RUN --mount=type=tmpfs,target=/run --network=none bootc container lint
 # DECK BUILDS
 ################
 
-FROM bazzite AS bazzite-deck
+FROM agungos AS agungos-deck
 
-ARG IMAGE_NAME="${IMAGE_NAME:-bazzite-deck}"
+ARG IMAGE_NAME="${IMAGE_NAME:-agungos-deck}"
 ARG IMAGE_VENDOR="${IMAGE_VENDOR:-ublue-os}"
 ARG IMAGE_BRANCH="${IMAGE_BRANCH:-stable}"
 ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME:-kinoite}"
@@ -658,8 +658,8 @@ RUN --mount=type=cache,dst=/var/cache \
     sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_ublue-os-akmods.repo && \
     dnf5 -y copr enable ublue-os/staging && \
     dnf5 -y copr enable ublue-os/packages && \
-    dnf5 -y copr enable ublue-os/bazzite && \
-    dnf5 -y copr enable ublue-os/bazzite-multilib && \
+    dnf5 -y copr enable Anakagung2009-bit/AgungOS && \
+    dnf5 -y copr enable Anakagung2009-bit/AgungOS-multilib && \
     dnf5 -y copr enable ycollet/audinux && \
     dnf5 config-manager unsetopt skip_if_unavailable && \
     /ctx/cleanup
@@ -726,7 +726,7 @@ RUN --mount=type=cache,dst=/var/cache \
         python-crcmod && \
     chmod +x /usr/share/gamescope-session-plus/gamescope-session-plus && \
     sed -i 's/- xbox-elite/- deck/g' /usr/share/inputplumber/devices/50-steam_deck.yaml && \
-    git clone https://github.com/bazzite-org/jupiter-dock-updater-bin.git \
+    git clone https://github.com/agungos-org/jupiter-dock-updater-bin.git \
         --depth 1 \
         /tmp/jupiter-dock-updater-bin && \
     mv -v /tmp/jupiter-dock-updater-bin/packaged/usr/lib/jupiter-dock-updater /usr/libexec/jupiter-dock-updater && \
@@ -742,7 +742,7 @@ RUN --mount=type=cache,dst=/var/cache \
     --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     dnf5 -y swap \
-    --repo copr:copr.fedorainfracloud.org:ublue-os:bazzite \
+    --repo copr:copr.fedorainfracloud.org:ublue-os:agungos \
         upower upower && \
     dnf5 versionlock add \
         upower \
@@ -787,22 +787,22 @@ RUN --mount=type=cache,dst=/var/cache \
     for copr in \
         ublue-os/staging \
         ublue-os/packages \
-        ublue-os/bazzite \
-        ublue-os/bazzite-multilib \
+        Anakagung2009-bit/AgungOS \
+        Anakagung2009-bit/AgungOS-multilib \
         ycollet/audinux; \
     do \
         dnf5 -y copr disable -y $copr; \
     done && unset -v copr && \
-    { rm -v /usr/share/applications/bazzite-steam-bpm.desktop || true; } && \
+    { rm -v /usr/share/applications/agungos-steam-bpm.desktop || true; } && \
     systemctl enable --global steamos-manager.service && \
     systemctl enable steamos-manager.service && \
     systemctl enable inputplumber.service && \
-    systemctl enable bazzite-autologin.service && \
+    systemctl enable agungos-autologin.service && \
     systemctl enable wireplumber-workaround.service && \
     systemctl enable wireplumber-sysconf.service && \
     systemctl enable pipewire-workaround.service && \
     systemctl enable pipewire-sysconf.service && \
-    systemctl enable bazzite-tdpfix.service && \
+    systemctl enable agungos-tdpfix.service && \
     systemctl --global disable sdgyrodsu.service && \
     systemctl --global enable steamos-powerbuttond.service && \
     systemctl disable input-remapper.service && \
@@ -822,9 +822,9 @@ RUN --mount=type=tmpfs,target=/run --network=none bootc container lint
 # NVIDIA BUILDS
 ################
 
-FROM ${NVIDIA_BASE} AS bazzite-nvidia
+FROM ${NVIDIA_BASE} AS agungos-nvidia
 
-ARG IMAGE_NAME="${IMAGE_NAME:-bazzite-nvidia}"
+ARG IMAGE_NAME="${IMAGE_NAME:-agungos-nvidia}"
 ARG IMAGE_VENDOR="${IMAGE_VENDOR:-ublue-os}"
 ARG IMAGE_BRANCH="${IMAGE_BRANCH:-stable}"
 ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME:-kinoite}"
@@ -870,12 +870,12 @@ RUN --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
-    echo "import \"/usr/share/ublue-os/just/95-bazzite-nvidia.just\"" >> /usr/share/ublue-os/justfile && \
+    echo "import \"/usr/share/ublue-os/just/95-agungos-nvidia.just\"" >> /usr/share/ublue-os/justfile && \
     if grep -q "silverblue" <<< "${BASE_IMAGE_NAME}"; then \
         mkdir -p "/usr/share/ublue-os/dconfs/nvidia-silverblue/" && \
-        cp "/usr/share/glib-2.0/schemas/zz0-"*"-bazzite-nvidia-silverblue-"*".gschema.override" "/usr/share/ublue-os/dconfs/nvidia-silverblue/" && \
-        dconf-override-converter to-dconf "/usr/share/ublue-os/dconfs/nvidia-silverblue/zz0-"*"-bazzite-nvidia-silverblue-"*".gschema.override" && \
-        rm "/usr/share/ublue-os/dconfs/nvidia-silverblue/zz0-"*"-bazzite-nvidia-silverblue-"*".gschema.override" \
+        cp "/usr/share/glib-2.0/schemas/zz0-"*"-agungos-nvidia-silverblue-"*".gschema.override" "/usr/share/ublue-os/dconfs/nvidia-silverblue/" && \
+        dconf-override-converter to-dconf "/usr/share/ublue-os/dconfs/nvidia-silverblue/zz0-"*"-agungos-nvidia-silverblue-"*".gschema.override" && \
+        rm "/usr/share/ublue-os/dconfs/nvidia-silverblue/zz0-"*"-agungos-nvidia-silverblue-"*".gschema.override" \
     ; fi && \
     systemctl disable supergfxd.service && \
     dnf5 config-manager setopt skip_if_unavailable=1 && \

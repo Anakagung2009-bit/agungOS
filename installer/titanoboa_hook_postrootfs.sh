@@ -16,19 +16,19 @@ mkdir -p /var/lib/rpm-state # Needed for Anaconda Web UI
 dnf install -qy --setopt=install_weak_deps=0 qrencode yad
 
 # Variables
-imageref="$(podman images --format '{{ index .Names 0 }}\n' 'bazzite*' | head -1)"
+imageref="$(podman images --format '{{ index .Names 0 }}\n' 'agungos*' | head -1)"
 imageref="${imageref##*://}"
 imageref="${imageref%%:*}"
 imagetag="$(podman images --format '{{ .Tag }}\n' "$imageref" | head -1)"
 sbkey='https://github.com/ublue-os/akmods/raw/main/certs/public_key.der'
 SECUREBOOT_KEY="/usr/share/ublue-os/sb_pubkey.der"
-SECUREBOOT_DOC_URL="https://docs.bazzite.gg/sb"
+SECUREBOOT_DOC_URL="https://docs.agungos.gg/sb"
 SECUREBOOT_DOC_URL_QR="/usr/share/ublue-os/secure_boot_qr.png"
 
-# Bazzite anaconda profile
+# AgungOS anaconda profile
 : ${VARIANT_ID:?}
 
-echo "Bazzite release $VERSION_ID ($VERSION_CODENAME)" >/etc/system-release
+echo "AgungOS release $VERSION_ID ($VERSION_CODENAME)" >/etc/system-release
 
 # Secureboot Key Fetch
 mkdir -p /usr/share/ublue-os
@@ -91,7 +91,7 @@ if [[ -z \$xboot_dev ]]; then
   echo "ERROR: xboot_dev not found"
   exit 1
 fi
-e2label "\$xboot_dev" "bazzite_xboot"
+e2label "\$xboot_dev" "agungos_xboot"
 %end
 
 # Open a dialog with the installation logs
@@ -184,7 +184,7 @@ qrencode -o "$SECUREBOOT_DOC_URL_QR" "$SECUREBOOT_DOC_URL"
     for s in \
         rpm-ostree-countme.service \
         tailscaled.service \
-        bazzite-hardware-setup.service \
+        agungos-hardware-setup.service \
         ublue-hardware-setup.service \
         bootloader-update.service \
         brew-upgrade.timer \
@@ -195,7 +195,7 @@ qrencode -o "$SECUREBOOT_DOC_URL_QR" "$SECUREBOOT_DOC_URL"
         ublue-guest-user.service \
         ublue-os-media-automount.service \
         ublue-system-setup.service \
-        bazzite-flatpak-manager.service \
+        agungos-flatpak-manager.service \
         ublue-flatpak-manager.service \
         flatpak-add-fedora-repos.service \
         greenboot-set-rollback-trigger.service \
@@ -210,7 +210,7 @@ qrencode -o "$SECUREBOOT_DOC_URL_QR" "$SECUREBOOT_DOC_URL"
 
     for s in \
         podman-auto-update.timer \
-        bazzite-user-setup.service \
+        agungos-user-setup.service \
         ublue-user-setup.service; do
         if systemctl --global list-unit-files "$s" >/dev/null 2>&1; then
             systemctl --global disable "$s"
@@ -274,7 +274,7 @@ dnf -yq remove steam lutris bazaar waydroid || :
 rm -vf /etc/profile.d/verify_motd.sh
 
 (
-    wallpaper_url=https://github.com/ublue-os/bazzite/raw/refs/heads/main/press_kit/art/Convergence_Wallpaper_DX.jxl
+    wallpaper_url=https://github.com/Anakagung2009-bit/AgungOS/raw/refs/heads/main/press_kit/art/Convergence_Wallpaper_DX.jxl
     wallpaper_file=/usr/share/wallpapers/convergence.jxl
     wget -nv -O "$wallpaper_file" "$wallpaper_url"
     rm -f /usr/share/backgrounds/default.xml
@@ -296,7 +296,7 @@ fi
 # Change default pins for KDE
 if [[ $desktop_env == kde ]]; then
     sed -i '/const allPanels/,$d' /usr/share/plasma/layout-templates/org.kde.plasma.desktop.defaultPanel/contents/layout.js
-    sed -i '$r /usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/bazzite-pins.js' /usr/share/plasma/layout-templates/org.kde.plasma.desktop.defaultPanel/contents/layout.js
+    sed -i '$r /usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/agungos-pins.js' /usr/share/plasma/layout-templates/org.kde.plasma.desktop.defaultPanel/contents/layout.js
 fi
 
 # Don't start the fedora-welcome app (gnome only)

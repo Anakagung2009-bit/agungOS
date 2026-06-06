@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# Ref: https://github.com/ondrejbudai/bootc-isos/blob/3b3a185e4a57947f57baf53d2be5aee469274f98/bazzite/src/build.sh
+# Ref: https://github.com/ondrejbudai/bootc-isos/blob/3b3a185e4a57947f57baf53d2be5aee469274f98/agungos/src/build.sh
 
 set -exo pipefail
 

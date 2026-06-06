@@ -1,0 +1,10 @@
+[Unit]
+Description=Enables AgungOS autologin
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/agungos-autologin
+
+[Install]
+WantedBy=multi-user.target

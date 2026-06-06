@@ -7,18 +7,18 @@ Version:        {{{ git_dir_version }}}
 Release:        1%{?dist}
 Summary:        KDE Presets from Valve's SteamOS 3.0
 License:        GPLv2
-URL:            https://github.com/ublue-os/bazzite
+URL:            https://github.com/Anakagung2009-bit/AgungOS
 
 Source0:        https://gitlab.com/evlaV/%{packagename}/-/archive/%{packagever}/%{packagename}-%{packagever}.tar.gz
 Source1:        steamdeck-le.svg
-Source2:        bazzite_logo.svgz
+Source2:        agungos_logo.svgz
 Source3:        plasmarc
 Source4:        kwinrc
 BuildArch:      noarch
 Patch0:         fedora.patch
 Patch1:         nested-desktop-resolution.patch
 Patch2:         kdeglobals.patch
-Patch3:         bazzite_logo.patch
+Patch3:         agungos_logo.patch
 Patch4:         ublue.patch
 Patch5:         splash.patch
 Patch6:         0001-steam-virtual-keyboard.patch
@@ -73,8 +73,8 @@ rm %{buildroot}%{_bindir}/steamos-setup-kwallet
 rm -rf %{buildroot}%{_prefix}/lib/steamos
 rm -rf %{buildroot}%{_prefix}/lib/systemd
 rm -rf %{buildroot}%{_datadir}/kwalletd
-cp %{SOURCE2} %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vapor.desktop/contents/splash/images/bazzite_logo.svgz
-cp %{SOURCE2} %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vgui.desktop/contents/splash/images/bazzite_logo.svgz
+cp %{SOURCE2} %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vapor.desktop/contents/splash/images/agungos_logo.svgz
+cp %{SOURCE2} %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vgui.desktop/contents/splash/images/agungos_logo.svgz
 
 # Do post-installation
 %post

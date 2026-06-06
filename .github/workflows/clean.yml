@@ -19,7 +19,7 @@ jobs:
         uses: dataaxiom/ghcr-cleanup-action@f092b48ba3b604b2a83690dc4b2bbb3392e1045f # v1.2.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          packages: bazzite,bazzite-ally-budgie,bazzite-asus-nvidia,bazzite-asus-nvidia-open,bazzite-budgie,bazzite-budgie-asus,bazzite-budgie-asus-nvidia,bazzite-budgie-nvidia,bazzite-budgie-surface,bazzite-budgie-surface-nvidia,bazzite-deck,bazzite-deck-budgie,bazzite-deck-gnome,bazzite-deck-nvidia,bazzite-framegame-budgie,bazzite-gnome,bazzite-gnome-asus-nvidia,bazzite-gnome-asus-nvidia-open,bazzite-gnome-nvidia,bazzite-gnome-nvidia-open,bazzite-nvidia,bazzite-nvidia-open
+          packages: agungos,agungos-ally-budgie,agungos-asus-nvidia,agungos-asus-nvidia-open,agungos-budgie,agungos-budgie-asus,agungos-budgie-asus-nvidia,agungos-budgie-nvidia,agungos-budgie-surface,agungos-budgie-surface-nvidia,agungos-deck,agungos-deck-budgie,agungos-deck-gnome,agungos-deck-nvidia,agungos-framegame-budgie,agungos-gnome,agungos-gnome-asus-nvidia,agungos-gnome-asus-nvidia-open,agungos-gnome-nvidia,agungos-gnome-nvidia-open,agungos-nvidia,agungos-nvidia-open
           older-than: 90 days
           delete-orphaned-images: true
           keep-n-tagged: 7

@@ -9,7 +9,7 @@
 Summary:   Xwayland
 Name:      xorg-x11-server-Xwayland
 %global    xwayland_version 24.1.11
-Version:   %{xwayland_version}.bazzite.{{{ git_dir_version }}}
+Version:   %{xwayland_version}.agungos.{{{ git_dir_version }}}
 Release:   1%{?gitdate:.%{gitdate}git%{shortcommit}}%{?dist}
 
 URL:       http://www.x.org

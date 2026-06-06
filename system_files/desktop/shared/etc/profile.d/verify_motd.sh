@@ -5,7 +5,7 @@ CURRENT_REF=$(rpm-ostree status --json | jq -r '.deployments[0]["container-image
 
 # 2. Define Identifiers
 UNVERIFIED_TAG="ostree-unverified-registry"
-OFFICIAL_TAG="ghcr.io/ublue-os/"
+OFFICIAL_TAG="ghcr.io/Anakagung2009-bit/"
 
 # 3. The "Smart" Check
 if [[ "$CURRENT_REF" == *"$UNVERIFIED_TAG"* ]] && [[ "$CURRENT_REF" == *"$OFFICIAL_TAG"* ]]; then

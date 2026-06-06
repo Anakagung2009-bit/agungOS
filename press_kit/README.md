@@ -1,26 +1,26 @@
 <p align="center">
-  <img src="art/Convergence_Wallpaper.png?raw=true" alt="Bazzite"/>
+  <img src="art/Convergence_Wallpaper.png?raw=true" alt="AgungOS"/>
 </p>
 
 # Press Kit
 
-Thanks for generating content about Bazzite and Universal Blue! This document will explain how to use the brand and terminology used by the project.
+Thanks for generating content about AgungOS and Universal Blue! This document will explain how to use the brand and terminology used by the project.
 
-- [Bazzite](https://bazzite.gg/)
+- [AgungOS](https://agungos.gg/)
 - [Universal Blue](https://universal-blue.org/)
 
-# Bazzite Terminology
-The name of the project is `Bazzite`. It is built with [Universal Blue](https://universal-blue.org), which publishes base images that Bazzite uses. These in turn are derived from Fedora’s Atomic Desktop images. Universal Blue is the parent organization of [Bluefin](https://projectbluefin.io), [Bazzite](https://bazzite.gg), [Aurora](https://getaurora.dev), and [uCore](https://github.com/ublue-os/ucore). It also acts as the GitHub organization. 
+# AgungOS Terminology
+The name of the project is `AgungOS`. It is built with [Universal Blue](https://universal-blue.org), which publishes base images that AgungOS uses. These in turn are derived from Fedora’s Atomic Desktop images. Universal Blue is the parent organization of [Bluefin](https://projectbluefin.io), [AgungOS](https://agungos.gg), [Aurora](https://getaurora.dev), and [uCore](https://github.com/ublue-os/ucore). It also acts as the GitHub organization. 
 
 ## Proper Usage
-- `Bazzite` - used to refer to the project and/or operating system
-- `Bazzite-Deck` - Image used for handhelds, HTPCs, and other systems that can make use of Steam Gaming Mode
+- `AgungOS` - used to refer to the project and/or operating system
+- `AgungOS-Deck` - Image used for handhelds, HTPCs, and other systems that can make use of Steam Gaming Mode
 
 ## Incorrect Usage
-- `Bazzite OS` - or any addition of "OS" to the name.
-- `Fedora Bazzite` - this implies a formal relationship between Fedora and Bazzite. Check the [mission document](https://universal-blue.org/mission.html) for more information about the relationship between Fedora and Universal Blue
-- `Universal Bazzite` or `uBlue Bazzite` - "Bazzite is built with Universal Blue" or "Bazzite is a Universal Blue image" is recommended instead.
-- "Immutable Distribution" - Bazzite is an operating system, it is neither immutable nor a distribution, it is a custom image based on Fedora. As an alternative for immutable, the word `Atomic` may be used.
+- `AgungOS OS` - or any addition of "OS" to the name.
+- `Fedora AgungOS` - this implies a formal relationship between Fedora and AgungOS. Check the [mission document](https://universal-blue.org/mission.html) for more information about the relationship between Fedora and Universal Blue
+- `Universal AgungOS` or `uBlue AgungOS` - "AgungOS is built with Universal Blue" or "AgungOS is a Universal Blue image" is recommended instead.
+- "Immutable Distribution" - AgungOS is an operating system, it is neither immutable nor a distribution, it is a custom image based on Fedora. As an alternative for immutable, the word `Atomic` may be used.
 
 
 # Universal Blue Terminology
@@ -43,7 +43,7 @@ All Universal Blue images share governance structures and are modelled after clo
 
 # Contacts
 
-Feel free to [email us](mailto:press@bazzite.gg) with any questions or get in touch with any of our [social platforms](https://docs.bazzite.gg/community/).
+Feel free to [email us](mailto:press@agungos.gg) with any questions or get in touch with any of our [social platforms](https://docs.agungos.gg/community/).
 
 # Fonts
 Our logo uses the following fonts:

@@ -7,7 +7,7 @@ Version:        {{{ git_dir_version }}}
 Release:        1%{?dist}
 Summary:        SteamOS SD card mounting for desktops
 License:        GPLv3
-URL:            https://github.com/ublue-os/bazzite
+URL:            https://github.com/Anakagung2009-bit/AgungOS
 
 Source:         https://gitlab.com/evlaV/%{packagename}/-/archive/%{packagever}/%{packagename}-%{packagever}.tar.gz
 Source1:        99-sdcard-rescan.rules
@@ -18,7 +18,7 @@ Patch1:         selinux.patch
 Patch2:         btrfs-automount.patch
 Patch3:         btrfs-format.patch
 Patch4:         user.patch
-Patch5:         bazzite-btrfs.patch
+Patch5:         agungos-btrfs.patch
 Patch6:         priv-write.patch
 Patch7:         biosupdate.patch
 Patch8:         gnome.patch

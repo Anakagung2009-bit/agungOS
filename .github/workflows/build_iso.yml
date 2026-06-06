@@ -31,12 +31,12 @@ jobs:
       fail-fast: false
       matrix:
         image_name:
-          - bazzite
-          - bazzite-nvidia
-          - bazzite-nvidia-open
-          - bazzite-gnome
-          - bazzite-gnome-nvidia
-          - bazzite-gnome-nvidia-open
+          - agungos
+          - agungos-nvidia
+          - agungos-nvidia-open
+          - agungos-gnome
+          - agungos-gnome-nvidia
+          - agungos-gnome-nvidia-open
     steps:
       - name: Show disk space
         run: sudo df -h
@@ -99,11 +99,11 @@ jobs:
         id: repo_owner_case
         run: echo "lowercase=${REPO_OWNER,,}" >> "$GITHUB_OUTPUT"
 
-      # - name: Setup Bazzite Repo
-      #   id: setup-bazzite-repo
+      # - name: Setup AgungOS Repo
+      #   id: setup-agungos-repo
       #   shell: bash
       #   run: |
-      #     curl -Lo ${{ github.workspace }}/bazzite.repo https://copr.fedorainfracloud.org/coprs/ublue-os/bazzite/repo/fedora-${{ matrix.major_version }}/bazzite-org-bazzite-fedora-${{ matrix.major_version }}.repo
+      #     curl -Lo ${{ github.workspace }}/agungos.repo https://copr.fedorainfracloud.org/coprs/Anakagung2009-bit/AgungOS/repo/fedora-${{ matrix.major_version }}/agungos-org-agungos-fedora-${{ matrix.major_version }}.repo
 
       # We need this as we use the desktop image as the runtime for
       # the livecds.
@@ -115,8 +115,8 @@ jobs:
           ref="${ref/-nvidia-open/}"
           ref="${ref/-nvidia/}"
           # Handle naming mismatch: deck uses nvidia-gnome, non-deck uses gnome-nvidia
-          if [[ "$ref" == "bazzite-nvidia-gnome" ]]; then
-            ref="bazzite-gnome-nvidia"
+          if [[ "$ref" == "agungos-nvidia-gnome" ]]; then
+            ref="agungos-gnome-nvidia"
           fi
           echo "ref=${ref}" >> $GITHUB_OUTPUT
 
@@ -214,4 +214,4 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y rclone
-          rclone copy $SOURCE_DIR R2:bazzite
+          rclone copy $SOURCE_DIR R2:agungos

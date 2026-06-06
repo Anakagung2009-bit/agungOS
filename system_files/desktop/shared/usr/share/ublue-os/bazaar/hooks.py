@@ -160,7 +160,7 @@ def handle_vscode():
                 if action == 'run-brew':
                     spawn_brew_ublue('visual-studio-code-linux')
                 elif action == 'learn-dx':
-                    spawn_and_detach(['xdg-open', 'https://dev.bazzite.gg/'])
+                    spawn_and_detach(['xdg-open', 'https://dev.agungos.gg/'])
             except:
                 pass
             return ''

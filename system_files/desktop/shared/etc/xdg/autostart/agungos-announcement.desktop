@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=AgungOS Announcements
+Exec=/usr/libexec/agungos-announcement
+Terminal=false
+StartupNotify=false
+X-GNOME-Autostart-enabled=true

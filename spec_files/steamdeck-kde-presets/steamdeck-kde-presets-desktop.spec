@@ -7,16 +7,16 @@ Version:        {{{ git_dir_version }}}
 Release:        1%{?dist}
 Summary:        KDE Presets from Valve's SteamOS 3.0 for desktops
 License:        GPLv2
-URL:            https://github.com/ublue-os/bazzite
+URL:            https://github.com/Anakagung2009-bit/AgungOS
 
 Source0:        https://gitlab.com/evlaV/%{packagename}/-/archive/%{packagever}/%{packagename}-%{packagever}.tar.gz
 Source1:        kdeglobals-desktop
 Source2:        steamdeck-le.svg
-Source3:        bazzite_logo.svgz
+Source3:        agungos_logo.svgz
 Source4:        plasmarc
 Source5:        kscreenlockerrc
 Patch0:         multiuser.patch
-Patch1:         bazzite_logo.patch
+Patch1:         agungos_logo.patch
 Patch2:         ublue.patch
 Patch3:         splash.patch
 Patch4:         vapor-metadata.patch
@@ -80,8 +80,8 @@ cp %{SOURCE1} %{buildroot}%{_sysconfdir}/xdg/kdeglobals
 rm %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vapor.desktop/contents/splash/images/deck_logo.svgz
 rm %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vgui.desktop/contents/splash/images/deck_logo.svgz
 rm -rf %{buildroot}%{_datadir}/kwalletd
-cp %{SOURCE3} %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vapor.desktop/contents/splash/images/bazzite_logo.svgz
-cp %{SOURCE3} %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vgui.desktop/contents/splash/images/bazzite_logo.svgz
+cp %{SOURCE3} %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vapor.desktop/contents/splash/images/agungos_logo.svgz
+cp %{SOURCE3} %{buildroot}%{_datadir}/plasma/look-and-feel/com.valve.vgui.desktop/contents/splash/images/agungos_logo.svgz
 cp %{SOURCE5} %{buildroot}%{_sysconfdir}/xdg/kscreenlockerrc
 
 # Do post-installation

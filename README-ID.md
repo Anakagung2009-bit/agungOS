@@ -1,19 +1,19 @@
 <p align="center">
-  <a href="https://bazzite.gg/">
+  <a href="https://agungos.gg/">
     <picture>
-      <source srcset="repo_content/Bazzite_Light.svg" media="(prefers-color-scheme: dark)">
-      <img src="repo_content/Bazzite.svg" alt="Bazzite"/>
+      <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
+      <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
     </picture>
   </a>
 </p>
 
-[![build-bazzite](https://github.com/ublue-os/bazzite/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/bazzite/actions/workflows/build.yml)
+[![build-agungos](https://github.com/Anakagung2009-bit/AgungOS/actions/workflows/build.yml/badge.svg)](https://github.com/Anakagung2009-bit/AgungOS/actions/workflows/build.yml)
 
-# [🇺🇸](https://github.com/ublue-os/bazzite/blob/main/README.md) [🇪🇸](https://github.com/ublue-os/bazzite/blob/main/README-SPA.md) [🇮🇩](https://github.com/ublue-os/bazzite/blob/main/README-ID.md) [🇫🇷](https://github.com/ublue-os/bazzite/blob/main/README-FR.md) [🇧🇷](https://github.com/ublue-os/bazzite/blob/main/README-BR.md) [🇳🇱](https://github.com/ublue-os/bazzite/blob/main/README-NL.md) [🇹🇼](https://github.com/ublue-os/bazzite/blob/main/README-ZH-TW.md)
+# [🇺🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README.md) [🇪🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-SPA.md) [🇮🇩](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ID.md) [🇫🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-FR.md) [🇧🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-BR.md) [🇳🇱](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-NL.md) [🇹🇼](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ZH-TW.md)
 
 
 <p align="center">
-  <a href="https://bazzite.gg/#image-picker"><img src="/repo_content/download.png?raw=true" alt="Download Bazzite"/></a>
+  <a href="https://agungos.gg/#image-picker"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
 </p>
 
 ---
@@ -41,7 +41,7 @@
 
 ## Tentang & Fitur
 
-Bazzite dibentuk dari [ublue-os/main](https://github.com/ublue-os/main) and [ublue-os/nvidia](https://github.com/ublue-os/nvidia) menggunakan teknologi dari [Fedora](https://fedoraproject.org/), yang berarti dukungan perangkat keras dan driver lebih lengkap. Dan Bazzite menambah fitur ini:
+AgungOS dibentuk dari [ublue-os/main](https://github.com/ublue-os/main) and [ublue-os/nvidia](https://github.com/ublue-os/nvidia) menggunakan teknologi dari [Fedora](https://fedoraproject.org/), yang berarti dukungan perangkat keras dan driver lebih lengkap. Dan AgungOS menambah fitur ini:
 
 - Pra-install driver proprietary Nvidia
 - Dukungan penuh untuk kodek H264 yang diakselerasi perangkat keras
@@ -59,13 +59,13 @@ Bazzite dibentuk dari [ublue-os/main](https://github.com/ublue-os/main) and [ubl
 - Menkustomisasi konfigurasi System76-Scheduler dengan aturan tambahan.
 - Menggunakan [Google's BBR TCP congestion control](https://github.com/google/bbr) secara bawaan.
 - Pra-install [Input Remapper](https://github.com/sezanzeb/input-remapper) dan diaktifkan secara bawaan. <sub><sup>(Dinonaktifkan secara bawaan di varian Deck tapi tersedia dan dapat diaktifkan dengan `ujust _restore-input-remapper`)</sup></sub>
-- Portal Bazzite menyediakan cara mudah untuk menginstall berbagai macam aplikasi dan oprekan, termasuk menginstall [LACT](https://github.com/ilya-zlobintsev/LACT) dan [GreenWithEnvy](https://gitlab.com/leinardi/gwe).
-- Manajemen paket [Brew](https://brew.sh/) tersedia secara optional dan dapat diinstall dengan Portal Bazzite.
+- Portal AgungOS menyediakan cara mudah untuk menginstall berbagai macam aplikasi dan oprekan, termasuk menginstall [LACT](https://github.com/ilya-zlobintsev/LACT) dan [GreenWithEnvy](https://gitlab.com/leinardi/gwe).
+- Manajemen paket [Brew](https://brew.sh/) tersedia secara optional dan dapat diinstall dengan Portal AgungOS.
 - Pra-install [Waydroid](https://waydro.id/) untuk menjalankan aplikasi Android. Dapat diatur dengan mengikuti [panduan cepat](https://universal-blue.discourse.group/docs?topic=32).
 - Mengatur aplikasi dengan [Flatseal](https://github.com/tchx84/Flatseal), [Warehouse](https://github.com/flattool/warehouse), dan [Gear Lever](https://github.com/mijorus/gearlever).
 - [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) driver i2c-piix4 dan i2c-nct6775 untuk mengatur RGB di beberapa jenis motherboard.
-- Disediakan secara bawaan driver [OpenRazer](https://openrazer.github.io), Pilih OpenRazer di portal bazzite atau jalankan perintah `ujust install-openrazer` diterminal untuk menggunakannya.
-- Disediakan secara bawaan [OpenTabletDriver](https://opentabletdriver.net/) udev rules, dengan perangkat lunaknya yang dapat dipasang dengan portal bazzite atau dengan mengetikkan `ujust install-opentabletdriver` di terminal.
+- Disediakan secara bawaan driver [OpenRazer](https://openrazer.github.io), Pilih OpenRazer di portal agungos atau jalankan perintah `ujust install-openrazer` diterminal untuk menggunakannya.
+- Disediakan secara bawaan [OpenTabletDriver](https://opentabletdriver.net/) udev rules, dengan perangkat lunaknya yang dapat dipasang dengan portal agungos atau dengan mengetikkan `ujust install-opentabletdriver` di terminal.
 - Driver [GCAdapter_OC](https://github.com/hannesmann/gcadapter-oc-kmod) untuk men-overclocking Kontroller Nintendo Gamecube sampai dengan 1000hz polling.
 - Dukungan untuk keyboard [Wooting](https://wooting.io/).
 - Dukungan untuk kartu grafis Southern Islands <sub><sup>(HD 7000)</sup></sub> and Sea Islands <sub><sup>(HD 8000)</sup></sub> dengan driver `amdgpu`.
@@ -75,32 +75,32 @@ Bazzite dibentuk dari [ublue-os/main](https://github.com/ublue-os/main) and [ubl
 
 ### Desktop
 
-Varian umum yang tersedia sebagai `bazzite`, cocok untuk komputer desktop.
+Varian umum yang tersedia sebagai `agungos`, cocok untuk komputer desktop.
 
 - Pembaruan otomatis untuk Sistem Operasi,Flatpak, dan lainnya.
 
 > [!IMPORTANT]
-> **ISO bisa diunduh dari halaman rilis kami [disini](https://github.com/ublue-os/bazzite/releases), dan berbagai macam panduan instalasi dapat ditemukan [disini](https://universal-blue.discourse.group/docs?topic=30).**
+> **ISO bisa diunduh dari halaman rilis kami [disini](https://github.com/Anakagung2009-bit/AgungOS/releases), dan berbagai macam panduan instalasi dapat ditemukan [disini](https://universal-blue.discourse.group/docs?topic=30).**
 
 Jika anda telah menggunakan image dari Universal Blue anda dapat mengikuti [instruksi ini](https://universal-blue.org/images/#image-list). Untuk berganti image dari image upstream Fedora Silverblue/Kinoite ostree anda dapat mengikuti perintah ini:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS:stable
 ```
 
 atau perangkat dengan kartu grafis Nvidia:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-nvidia:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-nvidia:stable
 ```
 
 **Untuk pengguna dengan Secure Boot aktif:** Jalankan `ujust enroll-secure-boot-key` dan masukan password `universalblue` jika diperintahkan untuk menenroll kunci yang dibutuhkan.
 
 ### Steam Deck/Home Theater PCs (HTPCs)
 > [!IMPORTANT]
-Perangkat yang bukan Steam Deck masih bisa menggunakan image bazzite-deck, tetapi harus menggunakan Kartu grafis dari AMD/Intel.
+Perangkat yang bukan Steam Deck masih bisa menggunakan image agungos-deck, tetapi harus menggunakan Kartu grafis dari AMD/Intel.
 
-Varian `bazzite-deck` ini didesain untuk digunakan sebagai alternatif untuk SteamOS di perangkat Steam Deck dan HTPC dengan pengalaman seperti konsol:
+Varian `agungos-deck` ini didesain untuk digunakan sebagai alternatif untuk SteamOS di perangkat Steam Deck dan HTPC dengan pengalaman seperti konsol:
 
 - Langsung boot ke Gamemode seperti SteamOS.
 - **`duperemove` secara otomatis yang berguna untuk mengurangi ukuran folder compatdata.**
@@ -117,7 +117,7 @@ Varian `bazzite-deck` ini didesain untuk digunakan sebagai alternatif untuk Stea
 - Dukungan untuk dual-boot dengan Windows karena GRUB dari Fedora.
 - Pembaruan merusak sesuatu? tinggal rollback ke versi sebelumnya berkat fitur rollback `rpm-ostree`. Anda bisa memilih versi image sebelumnya di boot menu.
 - Pra-install Steam dan Lutris sebagai paket sistem.
-- Pra-install [Discover Overlay](https://github.com/trigg/Discover) untuk Discord dan otomatis diluncurkan di Gamemode,dan di desktop jika Discord terinstall, [Lihat dokumentasinya disini](https://trigg.github.io/Discover/bazzite).
+- Pra-install [Discover Overlay](https://github.com/trigg/Discover) untuk Discord dan otomatis diluncurkan di Gamemode,dan di desktop jika Discord terinstall, [Lihat dokumentasinya disini](https://trigg.github.io/Discover/agungos).
 - Menggunakan ZRAM<sub><sup>(4GB)</sup></sub> dengan kompresi LZ4 secara bawaan.
 - Penjadwal I/O untuk mencegah I/O starvation ketika memasang game atau ketika proses latar belakang `duperemove` dan `rmlint` bekerja.
 - Mengaplikasikan parameter kernel dari SteamOS.
@@ -128,18 +128,18 @@ Varian `bazzite-deck` ini didesain untuk digunakan sebagai alternatif untuk Stea
     - Anda bisa menggunakan X11 jika diperlukan dengan mengedit `/etc/default/desktop-wayland`.
     - Lu punya RAM 32 GB? anda bisa memakai 2x lipat VRAM yang diaplikasikan secara otomatis!. <sup><sub>(Coba bagikan skill ngesolder lu dong)</sub></sup>
 - Service yang spesifik ke Steam Deck dapat dimatikan dengan menjalankan `ujust disable-deck-services` di terminal, berguna untuk menjalankan image ini di konsol Handheld lain dan HTPC.
-- Informasi tambahan dapat ditemukan [disini](https://universal-blue.discourse.group/docs?topic=37) dibagian Bazzite Steam Deck Images.
+- Informasi tambahan dapat ditemukan [disini](https://universal-blue.discourse.group/docs?topic=37) dibagian AgungOS Steam Deck Images.
 
 > [!WARNING]
-> **Dikarenakan ada bug/kutu dari upstream,Bazzite tidak bisa digunakan pada perangkat SteamDeck yang memiliki penyimpanan 64GB eMMC. meningkatkan penyimpanan menyelesaikan masalah ini.**
+> **Dikarenakan ada bug/kutu dari upstream,AgungOS tidak bisa digunakan pada perangkat SteamDeck yang memiliki penyimpanan 64GB eMMC. meningkatkan penyimpanan menyelesaikan masalah ini.**
 
 > [!IMPORTANT]
-> **ISO bisa diunduh dari halaman rilis kami [disini](https://github.com/ublue-os/bazzite/releases), dan berbagai macam panduan instalasi dapat ditemukan [disini](https://universal-blue.discourse.group/docs?topic=30).**
+> **ISO bisa diunduh dari halaman rilis kami [disini](https://github.com/Anakagung2009-bit/AgungOS/releases), dan berbagai macam panduan instalasi dapat ditemukan [disini](https://universal-blue.discourse.group/docs?topic=30).**
 
 Jika anda telah menggunakan image dari Universal Blue anda dapat mengikuti [instruksi ini](https://universal-blue.org/images/#image-list). Untuk berganti image dari image upstream Fedora Silverblue/Kinoite ostree anda dapat mengikuti perintah ini:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-deck:stable
 ```
 
 ### GNOME
@@ -155,28 +155,28 @@ Varian desktop GNOME tersedia dalam versi desktop dan deck.varian ini memiliki b
 - Pembaruan otomatis untuk [Firefox GNOME theme](https://github.com/rafaelmardojai/firefox-gnome-theme) dan [Thunderbird GNOME theme](https://github.com/rafaelmardojai/thunderbird-gnome-theme). <sup><sub>(jika terinstall)</sub></sup>
 
 > [!IMPORTANT]
-> **ISO bisa diunduh dari halaman rilis kami [disini](https://github.com/ublue-os/bazzite/releases), dan berbagai macam panduan instalasi dapat ditemukan [disini](https://universal-blue.discourse.group/docs?topic=30).**
+> **ISO bisa diunduh dari halaman rilis kami [disini](https://github.com/Anakagung2009-bit/AgungOS/releases), dan berbagai macam panduan instalasi dapat ditemukan [disini](https://universal-blue.discourse.group/docs?topic=30).**
 
 Untuk rebase dari sistem ostree yang ada ke varian **desktop**:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-gnome:stable
 ```
 
 Untuk rebase dari sistem ostree yang ada ke varian **desktop dengan driver Nvidia** release:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome-nvidia:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-gnome-nvidia:stable
 ```
 
 > [!WARNING]
-> **Dikarenakan ada bug/kutu dari upstream,Bazzite tidak bisa digunakan pada perangkat SteamDeck yang memiliki penyimpanan 64GB eMMC saat ini.**
+> **Dikarenakan ada bug/kutu dari upstream,AgungOS tidak bisa digunakan pada perangkat SteamDeck yang memiliki penyimpanan 64GB eMMC saat ini.**
 
 
 Untuk rebase dari sistem ostree yang ada ke varian **Steam Deck/HTPC**:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-deck-gnome:stable
 ```
 
 ### Fitur dari Upstream
@@ -186,7 +186,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome
 - Flathub diaktifkan secara bawaan
 - Perintah [`ujust`](https://github.com/casey/just) untuk kemudahan.
 - Kodek Multimedia secara bawaan.
-- Rollback Bazzite dari build apapun dalam periode 90 hari.
+- Rollback AgungOS dari build apapun dalam periode 90 hari.
 
 #### Fitur dari Fedora Linux (Kinoite & Silverblue)
 
@@ -199,15 +199,15 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome
 
 ## Alasan
 
-Bazzite dimulai sebagai proyek untuk menyelesaikan berbagai masalah yang ada di SteamOS, terutama paket-paket yang tidak terbarukan (walaupun menggunakan ArchLinux sebagai base) dan tidak ada manajemen paket yang fungsional.
+AgungOS dimulai sebagai proyek untuk menyelesaikan berbagai masalah yang ada di SteamOS, terutama paket-paket yang tidak terbarukan (walaupun menggunakan ArchLinux sebagai base) dan tidak ada manajemen paket yang fungsional.
 
 Walaupun proyek ini juga menggunakan image. anda masih bisa menginstall berbagai macam paket Fedora dari perintah shell. Paket-paket ini akan tetap bertahan setelah pembaruan <sub><sup>(Jadi anda bisa install aplikasi VPN yang anda g bisa install di SteamOS)<sub><sup>.
-Sebagai tambahan, Bazzite sering diupdate beberapa kali dalam satu minggu dengan paket-paket dari upstream Fedora, memberikan anda performa terbaik dan fitur-fitur terbaru di base yang stabil.
+Sebagai tambahan, AgungOS sering diupdate beberapa kali dalam satu minggu dengan paket-paket dari upstream Fedora, memberikan anda performa terbaik dan fitur-fitur terbaru di base yang stabil.
 
-Bazzite hadir dengan versi Linux kernel yang terbaru dan SELinux diaktifkan secara bawaan dengan dukungan penuh untuk secure boot <sub><sup>(Jalankan `ujust enroll-secure-boot-key` dan masukan password `universalblue` jika diperintahkan untuk menroll key dari kita)</sup></sub>
-dan enkripsi disk membuat ini aman dan sempurna untuk komputasi general. <sup><sub>(Yes, anda bisa ngeprint dari Bazzite!)</sub></sup>.
+AgungOS hadir dengan versi Linux kernel yang terbaru dan SELinux diaktifkan secara bawaan dengan dukungan penuh untuk secure boot <sub><sup>(Jalankan `ujust enroll-secure-boot-key` dan masukan password `universalblue` jika diperintahkan untuk menroll key dari kita)</sup></sub>
+dan enkripsi disk membuat ini aman dan sempurna untuk komputasi general. <sup><sub>(Yes, anda bisa ngeprint dari AgungOS!)</sub></sup>.
 
-Baca [FAQ](https://universal-blue.discourse.group/docs?topic=33) untuk tahu apa saja yang membuat Bazzite beda dari Sistem Operasi Linux yang lain.
+Baca [FAQ](https://universal-blue.discourse.group/docs?topic=33) untuk tahu apa saja yang membuat AgungOS beda dari Sistem Operasi Linux yang lain.
 
 ## Pameran
 
@@ -226,21 +226,21 @@ Baca [FAQ](https://universal-blue.discourse.group/docs?topic=33) untuk tahu apa 
 - [Panduan Gim](https://universal-blue.discourse.group/docs?topic=31)
 - [Panduan dual booting](https://universal-blue.discourse.group/docs?topic=129)
 
-Temukan dokumentasi tambahan project ini [disini](http://docs.bazzite.gg/).
+Temukan dokumentasi tambahan project ini [disini](http://docs.agungos.gg/).
 
-Cek [buletin](https://universal-blue.discourse.group/tag/bazzite-buzz) kami yang selalu update secara regular tentang proyek ini.
+Cek [buletin](https://universal-blue.discourse.group/tag/agungos-buzz) kami yang selalu update secara regular tentang proyek ini.
 
 ## Verifikasi
 
 Image berikut ini telah disigned oleh sigstore's [cosign](https://docs.sigstore.dev/cosign/signing/overview/). Anda bisa menverifikasi signature dengan mengunduh key `cosign.pub` dari repo ini dan menjalankan perintah ini:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/ublue-os/bazzite
+cosign verify --key cosign.pub ghcr.io/Anakagung2009-bit/AgungOS
 ```
 
 ## Secure Boot
 
-Secure boot didukung dengan key dari kami. Pub key dapat ditemukan di root repositori [ini](https://github.com/ublue-os/bazzite/blob/main/secure_boot.der).
+Secure boot didukung dengan key dari kami. Pub key dapat ditemukan di root repositori [ini](https://github.com/Anakagung2009-bit/AgungOS/blob/main/secure_boot.der).
 Jika anda ingin menenroll key ini sebelum instalasi, unduh key ini dan jalankan:
 
 ```bash
@@ -250,10 +250,10 @@ sudo mokutil --import secure_boot.der
 
 ## Metrik Kontribusi
 
-![Bazzite](https://repobeats.axiom.co/api/embed/86b500d79c613015ad16f56df76c8e13f3fd98ae.svg "Repobeats analytics image")
+![AgungOS](https://repobeats.axiom.co/api/embed/86b500d79c613015ad16f56df76c8e13f3fd98ae.svg "Repobeats analytics image")
 
 ## Ucapan Terimakasih
-Bazzite merupakan upaya dari komunitas dan tidak akan pernah ada tanpa dukungan dari semua orang. berikut ini merupakan orang-orang yang telah membantu kami:
+AgungOS merupakan upaya dari komunitas dan tidak akan pernah ada tanpa dukungan dari semua orang. berikut ini merupakan orang-orang yang telah membantu kami:
 
 - [amelia.svg](https://bsky.app/profile/ameliasvg.bsky.social) - Yang membuat logo dan branding.
 - [evlaV](https://gitlab.com/evlaV) - Untuk membuat kode dari Valve tersedia dan menjadi [orang ini](https://xkcd.com/2347/).
@@ -262,20 +262,20 @@ Bazzite merupakan upaya dari komunitas dan tidak akan pernah ada tanpa dukungan 
 - [sentry](https://copr.fedorainfracloud.org/coprs/sentry/) - Untuk membantu dengan patch kernel dan membuat repo [kernel-fsync repo](https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/) yang kami gunakan.
 - [nicknamenamenick](https://github.com/nicknamenamenick) - Untuk menjadi orang yang paling berharga, yang selalu menulis dokumentasi dan dukungan, dan selalu membantu pengguna.
 - [Steam Deck Homebrew](https://deckbrew.xyz) - Untuk memilih distribusi lain selain SteamOS walaupun butuh kerja ekstra, dan terimakasih yang spesial untuk [PartyWumpus](https://github.com/PartyWumpus) yang membuat Decky Loader bekerja dengan SELinux untuk kami.
-- [cyrv6737](https://github.com/cyrv6737) - Untuk inspirasi dan base yang akan menjadi bazzite.
+- [cyrv6737](https://github.com/cyrv6737) - Untuk inspirasi dan base yang akan menjadi agungos.
 
 ## Membuat Image Anda Sendiri
 
-Bazzite dibuat secara penuh di Github dan membuat versi anda sendiri sangat mudah, anda hanya perlu menfork repositori ini, menambahkan private sigining key, dan mengaktifkan Github actions.
+AgungOS dibuat secara penuh di Github dan membuat versi anda sendiri sangat mudah, anda hanya perlu menfork repositori ini, menambahkan private sigining key, dan mengaktifkan Github actions.
 
 
 [Membiasakan anda sendiri dengan](https://docs.github.com/en/actions/security-guides/encrypted-secrets) untuk menyimpan secret di Github. Anda perlu membuat [keypair baru](https://docs.sigstore.dev/cosign/signing/overview/) dengan cosign. Public key bisa anda teruh di repo publik anda. <sub><sup>(Pengguna anda perlu ini untuk mencek signature)</sup></sub>, dan anda bisa mempaste Secret key di  `Settings -> Secrets -> Actions` dengan nama `SIGNING_SECRET`.
 
-Kami juga membawakan konfigurasi untuk [pull app](https://github.com/apps/pull) jika anda ingin fork anda selalu up to date dengan upstream. Aktifkan ini di repo anda untuk melacak perubahan dari Bazzite ketika anda membuat modifikasi anda sendiri.
+Kami juga membawakan konfigurasi untuk [pull app](https://github.com/apps/pull) jika anda ingin fork anda selalu up to date dengan upstream. Aktifkan ini di repo anda untuk melacak perubahan dari AgungOS ketika anda membuat modifikasi anda sendiri.
 
 ## Bergabung Dengan Komunitas
 Anda bisa menemukan kami di [Discord Universal Blue](https://discord.gg/f8MUghG5PB) dan melihat arsip dari utas bantuan di [Answer Overflow](https://www.answeroverflow.com/c/1072614816579063828/1143023993041993769).
 
-Berdiskusi dan membuat panduan untuk pengguna di [Forum Discourse Universal Blue](https://universal-blue.discourse.group/c/bazzite/5).
+Berdiskusi dan membuat panduan untuk pengguna di [Forum Discourse Universal Blue](https://universal-blue.discourse.group/c/agungos/5).
 
 Ikuti Universal Blue di [Mastodon](https://fosstodon.org/@UniversalBlue).

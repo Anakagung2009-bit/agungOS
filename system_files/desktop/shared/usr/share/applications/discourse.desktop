@@ -2,8 +2,8 @@
 Type=Application
 NoDisplay=false
 Terminal=false
-Exec=xdg-open https://universal-blue.discourse.group/c/bazzite/
-Icon=/usr/share/ublue-os/bazzite/discourse.svg
+Exec=xdg-open https://universal-blue.discourse.group/c/agungos/
+Icon=/usr/share/Anakagung2009-bit/AgungOS/discourse.svg
 Name=Discourse
 Comment=Universal Blue Forums
 Comment[cs]=Fórum Universal Blue

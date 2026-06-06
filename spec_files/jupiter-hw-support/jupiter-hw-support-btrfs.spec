@@ -7,17 +7,17 @@ Version:        {{{ git_dir_version }}}
 Release:        1%{?dist}
 Summary:        Steam Deck Hardware Support Package
 License:        GPLv3
-URL:            https://github.com/ublue-os/bazzite
+URL:            https://github.com/Anakagung2009-bit/AgungOS
 
 Source:         https://gitlab.com/evlaV/%{packagename}/-/archive/%{packagever}/%{packagename}-%{packagever}.tar.gz
-Source2:        bazzite.png
+Source2:        agungos.png
 Source3:        https://github.com/apmorton/pyhidapi/raw/396ae60212fe08ff1d12879e9a049fb126e966c3/hid/__init__.py
 Patch0:         fedora.patch
 Patch1:         selinux.patch
 Patch2:         btrfs-automount.patch
 Patch3:         btrfs-format.patch
 Patch4:         user.patch
-Patch5:         bazzite-btrfs.patch
+Patch5:         agungos-btrfs.patch
 Patch6:         priv-write.patch
 Patch7:         biosupdate.patch
 Patch8:         gnome.patch
@@ -82,7 +82,7 @@ rm %{buildroot}%{_prefix}/lib/udev/rules.d/80-gpu-reset.rules
 rm -rf %{buildroot}%{_datadir}/jupiter_bios_updater/driver
 rm -rf %{buildroot}%{_unitdir}/multi-user.target.wants
 rm -rf %{buildroot}%{_datadir}/alsa
-# Add Bazzite PNG
+# Add AgungOS PNG
 cp %{SOURCE2} %{buildroot}%{_datadir}/steamos/steamos.png
 # Add fix for controller FW updater
 cp %{SOURCE3} %{buildroot}%{_datadir}/jupiter_controller_fw_updater/hid.py

@@ -2,9 +2,9 @@
 
 # Check for special case "bruh moment"
 if [[ "$1" == "moment" ]]; then
-  exec bazzite-rollback-helper rollback "$@"
+  exec agungos-rollback-helper rollback "$@"
   exit
 fi
 
-# Otherwise, pass all arguments to bazzite-rollback-helper
-exec bazzite-rollback-helper "$@"
+# Otherwise, pass all arguments to agungos-rollback-helper
+exec agungos-rollback-helper "$@"

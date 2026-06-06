@@ -1,4 +1,4 @@
-title: Bazzite Portal
+title: AgungOS Portal
 screens:
   - title: "Install Applications"
     description: "Get and configure software"
@@ -25,17 +25,17 @@ screens:
           - id: "uninstall"
             label: "Uninstall asusctl & ROG Control Center"
             script: 'ujust asus uninstall; status=$?; echo; echo "Press Enter to close..."; read -r _; exit $status'
-      - id: "bazzite-cli"
-        title: "Bazzite CLI"
+      - id: "agungos-cli"
+        title: "AgungOS CLI"
         description: "Setup a Bluefin-style command-line interface (CLI) experience with various utilities."
         default: false
         options:
           - id: "enable"
-            label: "Enable Bazzite CLI"
-            script: 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" && ujust bazzite-cli enable; status=$?; echo; echo "Press Enter to close..."; read -r _; exit $status'
+            label: "Enable AgungOS CLI"
+            script: 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" && ujust agungos-cli enable; status=$?; echo; echo "Press Enter to close..."; read -r _; exit $status'
           - id: "disable"
-            label: "Disable Bazzite CLI"
-            script: 'ujust bazzite-cli disable; status=$?; echo; echo "Press Enter to close..."; read -r _; exit $status'
+            label: "Disable AgungOS CLI"
+            script: 'ujust agungos-cli disable; status=$?; echo; echo "Press Enter to close..."; read -r _; exit $status'
       - id: "boxtron"
         title: "Boxtron"
         description: "Steam Play compatibility tool for running DOS games with native Linux DOSBox — installed using Distrobox."
@@ -87,18 +87,18 @@ screens:
           - id: "uninstall"
             label: "Uninstall Decky"
             script: "ujust setup-decky uninstall"
-      - id: "decky-bazzite-buddy"
-        title: "Decky Plugin — Bazzite Buddy"
-        description: "Enables viewing Bazzite version changes in the dedicated Game Mode."
+      - id: "decky-agungos-buddy"
+        title: "Decky Plugin — AgungOS Buddy"
+        description: "Enables viewing AgungOS version changes in the dedicated Game Mode."
         default: false
-        status_script: "ujust get-decky-bazzite-buddy status"
+        status_script: "ujust get-decky-agungos-buddy status"
         options:
           - id: "install"
-            label: "Install Bazzite Buddy Plugin"
-            script: "ujust get-decky-bazzite-buddy install"
+            label: "Install AgungOS Buddy Plugin"
+            script: "ujust get-decky-agungos-buddy install"
           - id: "uninstall"
-            label: "Uninstall Bazzite Buddy Plugin"
-            script: "ujust get-decky-bazzite-buddy uninstall"
+            label: "Uninstall AgungOS Buddy Plugin"
+            script: "ujust get-decky-agungos-buddy uninstall"
       - id: "decky-lossless-scaling"
         title: "Decky Plugin — Lossless Scaling"
         description: "Streamlines configuration of Lossless Scaling frame generation."
@@ -385,25 +385,25 @@ screens:
         description: "Subscription service for streaming live television programming."
         default: false
         script: "ujust get-media-app \"YouTube TV\""
-  - title: "Manage Bazzite"
+  - title: "Manage AgungOS"
     description: "System management and configuration"
     actions:
-      - id: "update-bazzite"
+      - id: "update-agungos"
         title: "Update your system"
-        description: "Update Bazzite, Flatpak apps, and more."
+        description: "Update AgungOS, Flatpak apps, and more."
         default: false
         script: "ujust update"
-      - id: "rebase-bazzite-stable"
+      - id: "rebase-agungos-stable"
         title: "Move to the stable update track"
-        description: "Rebase your system to the «stable» Bazzite image tag."
+        description: "Rebase your system to the «stable» AgungOS image tag."
         default: false
         script: "brh rebase stable -y && reboot"
-      - id: "rebase-bazzite-testing"
+      - id: "rebase-agungos-testing"
         title: "Move to the testing update track"
-        description: "Rebase your system to the «testing» Bazzite image tag."
+        description: "Rebase your system to the «testing» AgungOS image tag."
         default: false
         script: "brh rebase testing -y && reboot"
-      - id: "reset-bazzite"
+      - id: "reset-agungos"
         title: "Shed system software layers"
         description: "Reset «rpm-ostree» layers back to the default state, removing added packages. Will not touch user data."
         default: false
@@ -415,7 +415,7 @@ screens:
         script: 'rpm-ostree cleanup -p; status=$?; echo; echo "Press Enter to close..."; read -r _; exit $status'
       - id: "verify-image"
         title: "Move to a ‘verified’ image"
-        description: "Detect if you are on an ‘unverified’ image of Bazzite and then, if applicable, move you to a signed one."
+        description: "Detect if you are on an ‘unverified’ image of AgungOS and then, if applicable, move you to a signed one."
         default: false
         script: 'ujust verify-image; status=$?; echo; echo "Press Enter to close..."; read -r _; exit $status'
       - id: "wake-on-lan"
@@ -725,9 +725,9 @@ screens:
   - title: "Troubleshoot"
     description: "Tools and resources for diagnosing and fixing issues"
     actions:
-      - id: "bazzite-discord"
+      - id: "agungos-discord"
         title: "Get help through Discord"
-        description: "Enter our official server for Bazzite user tech support. Bring in your system logs!"
+        description: "Enter our official server for AgungOS user tech support. Bring in your system logs!"
         default: false
         script: "xdg-open https://discord.gg/JQq48bYzrc"
       - id: "get-logs"
@@ -735,8 +735,8 @@ screens:
         description: "Gather system records and information into a shareable web page report."
         default: false
         script: 'ujust get-logs; status=$?; echo; echo "Press Enter to close..."; read -r _; exit $status'
-      - id: "rollback-bazzite"
-        title: "Rollback to the prior Bazzite deployment"
+      - id: "rollback-agungos"
+        title: "Rollback to the prior AgungOS deployment"
         description: "Revert the ‘current deployment’ back to the former one. May be useful if the booted image has an issue."
         default: false
         script: "brh rollback -y && reboot"

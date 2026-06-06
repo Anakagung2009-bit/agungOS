@@ -52,19 +52,19 @@ if [[ $# -eq 1 ]]; then
       ;;
     rel|latest|stable)
       runcon system_u:unconfined_r:unconfined_t:s0 \
-        /usr/bin/bazzite-rollback-helper rebase stable -y
+        /usr/bin/agungos-rollback-helper rebase stable -y
       exit 0
       ;;
     rc|beta|testing)
       runcon system_u:unconfined_r:unconfined_t:s0 \
-        /usr/bin/bazzite-rollback-helper rebase testing -y
+        /usr/bin/agungos-rollback-helper rebase testing -y
       exit 0
       ;;
     bc|main|unstable)
       echo "The unstable branch has a high risk of breaking."
       echo "Do NOT use it unless you know what you are doing."
       runcon system_u:unconfined_r:unconfined_t:s0 \
-        /usr/bin/bazzite-rollback-helper rebase unstable -y
+        /usr/bin/agungos-rollback-helper rebase unstable -y
       exit 0
       ;;
   esac

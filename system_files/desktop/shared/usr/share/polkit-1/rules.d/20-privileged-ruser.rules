@@ -1,5 +1,5 @@
 polkit.addRule(function(action, subject) {
-    if ((action.id == "org.bazzite.policykit.privileged.user.setup") &&
+    if ((action.id == "org.agungos.policykit.privileged.user.setup") &&
          subject.isInGroup("wheel")) {
         return polkit.Result.YES;
     }

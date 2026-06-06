@@ -53,13 +53,13 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           PREFIX: ghcr.io/${{ steps.repo_owner_case.outputs.lowercase }}/
           TAG_MAPPINGS: |-
-            bazzite:${{ inputs.old_tag }}                           => bazzite:latest,stable,${{ env.ver }}
-            bazzite-deck:${{ inputs.old_tag }}                      => bazzite-deck:latest,stable,${{ env.ver }}
-            bazzite-deck-gnome:${{ inputs.old_tag }}                => bazzite-deck-gnome:latest,stable,${{ env.ver }}
-            bazzite-deck-nvidia:${{ inputs.old_tag }}               => bazzite-deck-nvidia:latest,stable,${{ env.ver }}
-            bazzite-deck-nvidia-gnome:${{ inputs.old_tag }}         => bazzite-deck-nvidia-gnome:latest,stable,${{ env.ver }}
-            bazzite-gnome:${{ inputs.old_tag }}                     => bazzite-gnome:latest,stable,${{ env.ver }}
-            bazzite-gnome-nvidia:${{ inputs.old_tag }}              => bazzite-gnome-nvidia:latest,stable,${{ env.ver }}
-            bazzite-gnome-nvidia-open:${{ inputs.old_tag }}         => bazzite-gnome-nvidia-open:latest,stable,${{ env.ver }}
-            bazzite-nvidia:${{ inputs.old_tag }}                    => bazzite-nvidia:latest,stable,${{ env.ver }}
-            bazzite-nvidia-open:${{ inputs.old_tag }}               => bazzite-nvidia-open:latest,stable,${{ env.ver }}
+            agungos:${{ inputs.old_tag }}                           => agungos:latest,stable,${{ env.ver }}
+            agungos-deck:${{ inputs.old_tag }}                      => agungos-deck:latest,stable,${{ env.ver }}
+            agungos-deck-gnome:${{ inputs.old_tag }}                => agungos-deck-gnome:latest,stable,${{ env.ver }}
+            agungos-deck-nvidia:${{ inputs.old_tag }}               => agungos-deck-nvidia:latest,stable,${{ env.ver }}
+            agungos-deck-nvidia-gnome:${{ inputs.old_tag }}         => agungos-deck-nvidia-gnome:latest,stable,${{ env.ver }}
+            agungos-gnome:${{ inputs.old_tag }}                     => agungos-gnome:latest,stable,${{ env.ver }}
+            agungos-gnome-nvidia:${{ inputs.old_tag }}              => agungos-gnome-nvidia:latest,stable,${{ env.ver }}
+            agungos-gnome-nvidia-open:${{ inputs.old_tag }}         => agungos-gnome-nvidia-open:latest,stable,${{ env.ver }}
+            agungos-nvidia:${{ inputs.old_tag }}                    => agungos-nvidia:latest,stable,${{ env.ver }}
+            agungos-nvidia-open:${{ inputs.old_tag }}               => agungos-nvidia-open:latest,stable,${{ env.ver }}

@@ -1,0 +1,10 @@
+[Unit]
+Description=Configure AgungOS for current user
+ConditionUser=!@system
+
+[Service]
+Type=simple
+ExecStart=/usr/libexec/agungos-user-setup
+
+[Install]
+WantedBy=default.target

@@ -3,7 +3,7 @@ Version:        {{{ git_dir_version }}}
 Release:        1%{?dist}
 Summary:        Backgrounds from Valve's SteamOS 3.0
 License:        GPLv2
-URL:            https://github.com/ublue-os/bazzite
+URL:            https://github.com/Anakagung2009-bit/AgungOS
 
 Source:         {{{ git_dir_pack }}}
 Source1:        https://gitlab.com/evlaV/steamdeck-kde-presets/-/archive/master/steamdeck-kde-presets-master.tar.gz?path=usr/share/wallpapers

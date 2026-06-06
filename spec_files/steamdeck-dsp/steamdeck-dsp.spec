@@ -9,7 +9,7 @@ URL:            https://github.com/evlav/valve-hardware-audio-processing
 Source:         %{url}/archive/refs/tags/%{version}.tar.gz
 
 Patch0:         fedora.patch
-Patch1:         bazzite.patch
+Patch1:         agungos.patch
 
 Requires:       pipewire-module-filter-chain-lv2
 Requires:       ladspa-noise-suppression-for-voice

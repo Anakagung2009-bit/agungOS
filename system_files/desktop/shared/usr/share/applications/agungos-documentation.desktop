@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+NoDisplay=false
+Terminal=false
+Exec=/usr/share/ublue-os/docs/serve.sh
+Icon=/usr/share/Anakagung2009-bit/AgungOS/docs.svg
+Name=Documentation
+Name[cs]=Dokumentace
+Name[el]=Τεκμηρίωση
+Name[ru]=Документация
+Comment=View AgungOS Documentation
+Comment[cs]=Zobrazit dokumentaci k AgungOS
+Comment[fr]=Voir la documentation de AgungOS
+Comment[el]=Προβολή τεκμηρίωσης AgungOS
+Comment[ru]=Посмотреть документацию AgungOS
+Categories=Documentation;System;
+Keywords=agungos;docs;manual;guide;help;tutorial;

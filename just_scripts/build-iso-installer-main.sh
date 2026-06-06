@@ -103,7 +103,7 @@ if [[ ! -f ${project_root}/${flatpak_dir_shortname}/flatpaks_with_deps ]]; then
         -e FLATPAK_TRIGGERSDIR=/flatpak/triggers \
         --volume "${FLATPAK_REFS_DIR}":/output \
         --volume "${TEMP_FLATPAK_INSTALL_DIR}":/temp_flatpak_install_dir \
-        "ghcr.io/ublue-os/${base_image}-main:${version}" /temp_flatpak_install_dir/script.sh
+        "ghcr.io/Anakagung2009-bit/${base_image}-main:${version}" /temp_flatpak_install_dir/script.sh
 fi
 
 # Remove Temp Directory
@@ -138,6 +138,6 @@ ${container_mgr} run --rm --privileged  \
     IMAGE_REPO="localhost" \
     IMAGE_TAG="${latest}-${git_branch}" \
     ISO_NAME="build/${tag}-${git_branch}.iso" \
-    SECURE_BOOT_KEY_URL='https://github.com/ublue-os/bazzite/raw/main/secure_boot.der' \
+    SECURE_BOOT_KEY_URL='https://github.com/Anakagung2009-bit/AgungOS/raw/main/secure_boot.der' \
     VARIANT="${variant}" \
     VERSION="${latest}"

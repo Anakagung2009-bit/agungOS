@@ -1,6 +1,6 @@
 Name:       wireplumber
 Version:    0.5.14
-Release:    1%{?dist}.bazzite.{{{ git_dir_version }}}
+Release:    1%{?dist}.agungos.{{{ git_dir_version }}}
 Summary:    A modular session/policy manager for PipeWire
 
 License:    MIT

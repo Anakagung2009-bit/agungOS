@@ -11,7 +11,7 @@ diff -Naur a/usr/share/plasma/look-and-feel/com.valve.vapor.deck.desktop/content
              anchors.centerIn: parent
  
 +            asynchronous: true
-             source: "images/bazzite_logo.svgz"
+             source: "images/agungos_logo.svgz"
  
 -            sourceSize.width: 128
 -            sourceSize.height: 128
@@ -55,7 +55,7 @@ diff -Naur a/usr/share/plasma/look-and-feel/com.valve.vgui.desktop/contents/spla
              anchors.centerIn: parent
  
 +            asynchronous: true
-             source: "images/bazzite_logo.svgz"
+             source: "images/agungos_logo.svgz"
  
 -            sourceSize.width: 128
 -            sourceSize.height: 128
