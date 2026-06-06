@@ -196,18 +196,15 @@ jobs:
           compression-level: 0
           overwrite: true
 
-      - name: Upload ISOs and Checksum to R2
+      - name: Upload ISOs and Checksum to Google Drive
         if: github.event_name == 'workflow_dispatch' && github.ref_name == 'main'
         shell: bash
         env:
-          RCLONE_CONFIG_R2_TYPE: s3
-          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
-          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          RCLONE_CONFIG_R2_REGION: auto
-          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          RCLONE_CONFIG_CONTENT: ${{ secrets.RCLONE_GDRIVE_CONFIG }}
           SOURCE_DIR: ${{ steps.upload-directory.outputs.iso-upload-dir }}
         run: |
           sudo apt-get update
           sudo apt-get install -y rclone
-          rclone copy $SOURCE_DIR R2:agungos
+          mkdir -p ~/.config/rclone
+          echo "$RCLONE_CONFIG_CONTENT" > ~/.config/rclone/rclone.conf
+          rclone copy $SOURCE_DIR gdrive:AgungOS
