@@ -332,7 +332,7 @@ RUN --mount=type=cache,dst=/var/cache \
         cage \
         wlr-randr \
         gmodpatchtool \
-        agungos-portal \
+        bazzite-portal \
         ls-iommu && \
     ln -s /dev/null /etc/NetworkManager/dispatcher.d/04-iscsi && \
     systemctl mask iscsi && \
@@ -726,7 +726,7 @@ RUN --mount=type=cache,dst=/var/cache \
         python-crcmod && \
     chmod +x /usr/share/gamescope-session-plus/gamescope-session-plus && \
     sed -i 's/- xbox-elite/- deck/g' /usr/share/inputplumber/devices/50-steam_deck.yaml && \
-    git clone https://github.com/agungos-org/jupiter-dock-updater-bin.git \
+    git clone https://github.com/bazzite-org/jupiter-dock-updater-bin.git \
         --depth 1 \
         /tmp/jupiter-dock-updater-bin && \
     mv -v /tmp/jupiter-dock-updater-bin/packaged/usr/lib/jupiter-dock-updater /usr/libexec/jupiter-dock-updater && \
