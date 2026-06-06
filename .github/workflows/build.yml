@@ -1,7 +1,7 @@
 name: Build AgungOS
 on:
-  schedule:
-    - cron: "40 4 * * 1" # 4:40 utc monday
+  # schedule:
+  #   - cron: "40 4 * * 1" # 4:40 utc monday
   pull_request:
     branches:
       - testing
@@ -58,12 +58,8 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - agungos
-          - agungos-gnome
-          - agungos-nvidia
-          - agungos-gnome-nvidia
-          - agungos-nvidia-open
-          - agungos-gnome-nvidia-open
+          - agungos-deck
+          - agungos-deck-nvidia
         include:
           - fedora_version: 44
             kernel_flavor: ogc

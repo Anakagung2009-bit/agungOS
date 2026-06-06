@@ -31,12 +31,8 @@ jobs:
       fail-fast: false
       matrix:
         image_name:
-          - agungos
-          - agungos-nvidia
-          - agungos-nvidia-open
-          - agungos-gnome
-          - agungos-gnome-nvidia
-          - agungos-gnome-nvidia-open
+          - agungos-deck
+          - agungos-deck-nvidia
     steps:
       - name: Show disk space
         run: sudo df -h
