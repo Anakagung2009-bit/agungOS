@@ -135,7 +135,7 @@ jobs:
           #
           # Define push and pull registries
           #
-          PULL_REGISTRY=ghcr.io/Anakagung2009-bit
+          PULL_REGISTRY=ghcr.io/ublue-os
           PUSH_REGISTRY=ghcr.io/${{ steps.repo_owner_case.outputs.lowercase }}
           echo "push_registry=${PUSH_REGISTRY}" >> $GITHUB_OUTPUT
           echo "pull_registry=${PULL_REGISTRY}" >> $GITHUB_OUTPUT
@@ -219,12 +219,12 @@ jobs:
           # Kernel & akmods
           #
           AKMODS_TAG="${{ steps.base.outputs.akmods_tag }}"
-          sudo podman pull ghcr.io/Anakagung2009-bit/akmods:${AKMODS_TAG}
-          # sudo podman pull ghcr.io/Anakagung2009-bit/akmods-extra:${AKMODS_TAG}
+          sudo podman pull ghcr.io/ublue-os/akmods:${AKMODS_TAG}
+          # sudo podman pull ghcr.io/ublue-os/akmods-extra:${AKMODS_TAG}
 
           if [ "${{ steps.base.outputs.install_nvidia }}" == "true" ]; then
             NVIDIA_FLAVOR="${{ steps.base.outputs.nvidia_flavor }}"
-            sudo podman pull "ghcr.io/Anakagung2009-bit/akmods-${NVIDIA_FLAVOR}:${AKMODS_TAG}"
+            sudo podman pull "ghcr.io/ublue-os/akmods-${NVIDIA_FLAVOR}:${AKMODS_TAG}"
           fi
 
 

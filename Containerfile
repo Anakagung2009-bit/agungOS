@@ -31,7 +31,7 @@ ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME:-kinoite}"
 ARG FEDORA_VERSION="${FEDORA_VERSION:-44}"
 ARG ARCH="${ARCH:-x86_64}"
 
-ARG BASE_IMAGE="${BASE_IMAGE:-ghcr.io/Anakagung2009-bit/${BASE_IMAGE_NAME}-main:${FEDORA_VERSION}}"
+ARG BASE_IMAGE="${BASE_IMAGE:-ghcr.io/ublue-os/${BASE_IMAGE_NAME}-main:${FEDORA_VERSION}}"
 ARG NVIDIA_BASE="${NVIDIA_BASE:-agungos}"
 ARG KERNEL_FLAVOR="${KERNEL_FLAVOR:-ogc}"
 ARG KERNEL_VERSION="${KERNEL_VERSION:-7.0.9-ogc3.2.fc44.x86_64}"
@@ -39,9 +39,9 @@ ARG NVIDIA_FLAVOR="${NVIDIA_FLAVOR:-nvidia-open}"
 ARG LINUX_CEC_REF="218fd8194fbf2641b1646ed44d69ef76eb6c57fd"
 ARG INPUTATTACH_CEC_UNITS_REF="cbd910971a6712a7aa6c5e7f5714fd0a4bffc417"
 
-FROM ghcr.io/Anakagung2009-bit/akmods:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods
-FROM ghcr.io/Anakagung2009-bit/akmods-extra:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods-extra
-FROM ghcr.io/Anakagung2009-bit/akmods-${NVIDIA_FLAVOR}:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods-nvidia
+FROM ghcr.io/ublue-os/akmods:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods
+FROM ghcr.io/ublue-os/akmods-extra:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods-extra
+FROM ghcr.io/ublue-os/akmods-${NVIDIA_FLAVOR}:${KERNEL_FLAVOR}-${FEDORA_VERSION}-${KERNEL_VERSION} AS akmods-nvidia
 
 FROM scratch AS ctx
 COPY build_files /
@@ -115,7 +115,7 @@ RUN --mount=type=bind,src=firmware,dst=/ctx/firmware \
     rm -rf /tmp/firmware
 
 # Copy Homebrew files from the brew image
-ARG BREW_IMAGE=ghcr.io/Anakagung2009-bit/brew:latest@sha256:ca91068f51ce663d495ccfc829352d6621ec95f6c7db447ade55023b222f9762
+ARG BREW_IMAGE=ghcr.io/ublue-os/brew:latest@sha256:ca91068f51ce663d495ccfc829352d6621ec95f6c7db447ade55023b222f9762
 COPY --from=${BREW_IMAGE} /system_files/ /tmp/brew_files/
 RUN find /tmp/brew_files -type f -printf '/%P\0' > /tmp/brew_list.txt && \
     cp -a /tmp/brew_files/. / && \
@@ -144,8 +144,8 @@ RUN --mount=type=cache,dst=/var/cache \
     mkdir -p /var/roothome && \
     dnf5 config-manager setopt keepcache=1 && \
     for copr in \
-        Anakagung2009-bit/AgungOS \
-        Anakagung2009-bit/AgungOS-multilib \
+        ublue-os/bazzite \
+        ublue-os/bazzite-multilib \
         ublue-os/staging \
         ublue-os/packages \
         ycollet/audinux \
@@ -404,7 +404,7 @@ RUN --mount=type=cache,dst=/var/cache \
     --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     --mount=type=secret,id=GITHUB_TOKEN \
-    /ctx/ghcurl "$(/ctx/ghcurl "https://api.github.com/repos/Anakagung2009-bit/AgungOS-ujust-picker/releases/latest" -s | jq -r '.assets[] | select(.name | test("x86_64$")) | .browser_download_url')" -sL -o /usr/bin/ujust-picker && \
+    /ctx/ghcurl "$(/ctx/ghcurl "https://api.github.com/repos/ublue-os/bazzite-ujust-picker/releases/latest" -s | jq -r '.assets[] | select(.name | test("x86_64$")) | .browser_download_url')" -sL -o /usr/bin/ujust-picker && \
     chmod +x /usr/bin/ujust-picker && \
     setfattr -n user.component -v "ujust-picker" /usr/bin/ujust-picker && \
     /ctx/cleanup
@@ -577,8 +577,8 @@ RUN --mount=type=cache,dst=/var/cache \
     do \
         sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/$repo.repo; \
     done && for copr in \
-        Anakagung2009-bit/AgungOS \
-        Anakagung2009-bit/AgungOS-multilib \
+        ublue-os/bazzite \
+        ublue-os/bazzite-multilib \
         ublue-os/staging \
         ublue-os/packages \
         ycollet/audinux \
@@ -658,8 +658,8 @@ RUN --mount=type=cache,dst=/var/cache \
     sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_ublue-os-akmods.repo && \
     dnf5 -y copr enable ublue-os/staging && \
     dnf5 -y copr enable ublue-os/packages && \
-    dnf5 -y copr enable Anakagung2009-bit/AgungOS && \
-    dnf5 -y copr enable Anakagung2009-bit/AgungOS-multilib && \
+    dnf5 -y copr enable ublue-os/bazzite && \
+    dnf5 -y copr enable ublue-os/bazzite-multilib && \
     dnf5 -y copr enable ycollet/audinux && \
     dnf5 config-manager unsetopt skip_if_unavailable && \
     /ctx/cleanup
@@ -787,8 +787,8 @@ RUN --mount=type=cache,dst=/var/cache \
     for copr in \
         ublue-os/staging \
         ublue-os/packages \
-        Anakagung2009-bit/AgungOS \
-        Anakagung2009-bit/AgungOS-multilib \
+        ublue-os/bazzite \
+        ublue-os/bazzite-multilib \
         ycollet/audinux; \
     do \
         dnf5 -y copr disable -y $copr; \
