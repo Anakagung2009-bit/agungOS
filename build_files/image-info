@@ -4,9 +4,9 @@ set -eoux pipefail
 
 IMAGE_PRETTY_NAME="AgungOS"
 IMAGE_LIKE="fedora"
-HOME_URL="https://agungos.gg"
-DOCUMENTATION_URL="https://docs.agungos.gg"
-SUPPORT_URL="https://discord.agungos.gg"
+HOME_URL="https://os.agungdev.com"
+DOCUMENTATION_URL="https://os.agungdev.com"
+SUPPORT_URL="https://discord.agungdev.com"
 BUG_SUPPORT_URL="https://github.com/Anakagung2009-bit/AgungOS/issues/"
 LOGO_ICON="agungos-logo-icon"
 LOGO_COLOR="0;38;2;138;43;226"

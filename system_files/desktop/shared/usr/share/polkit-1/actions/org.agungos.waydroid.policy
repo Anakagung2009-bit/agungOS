@@ -4,7 +4,7 @@
  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 <policyconfig>
   <vendor>AgungOS</vendor>
-  <vendor_url>https://agungos.gg</vendor_url>
+  <vendor_url>https://os.agungdev.com</vendor_url>
 
   <action id="org.agungos.policykit.waydroid.container.start">
     <description>Start Waydroid Container</description>

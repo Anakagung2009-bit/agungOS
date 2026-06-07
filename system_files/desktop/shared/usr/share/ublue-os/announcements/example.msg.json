@@ -1,6 +1,6 @@
 {
   "title": "Announcement Title",
-  "seeMoreUrl": "https://agungos.gg",
+  "seeMoreUrl": "https://os.agungdev.com",
   "body": "This is the body of the message.\n<hr/>\n<b>This is a bold text</b>",
   "if": true
 }
