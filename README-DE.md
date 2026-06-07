@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://agungos.gg/">
+  <a href="https://os.agungdev.com/">
     <picture>
       <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
       <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
@@ -12,7 +12,7 @@
 # [🇺🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README.md) [🇪🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-SPA.md) [🇮🇩](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ID.md) [🇨🇳](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-zh-cn.md) [🇫🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-FR.md) [🇧🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-BR.md) [🇳🇱](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-NL.md) [🇷🇺](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-RU.md) [🇩🇪](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-DE.md) [🇹🇼](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ZH-TW.md)
 
 <p align="center">
-  <a href="https://download.agungos.gg/"><img src="/repo_content/download.png?raw=true" alt="AgungOS herunterladen"/></a>
+  <a href="https://download.os.agungdev.com/"><img src="/repo_content/download.png?raw=true" alt="AgungOS herunterladen"/></a>
 </p>
 
 ---
@@ -44,9 +44,9 @@
 
 ## Über & Funktionen
 
-Für eine einsteigerfreundliche Erklärung von AgungOS [besuche bitte unsere Website](https://agungos.gg/) (Englisch). Dieses Readme behandelt alles ausführlich.
+Für eine einsteigerfreundliche Erklärung von AgungOS [besuche bitte unsere Website](https://os.agungdev.com/) (Englisch). Dieses Readme behandelt alles ausführlich.
 
-[AgungOS](https://agungos.gg/) ist ein angepasstes [Fedora Atomic](https://fedoraproject.org/atomic-desktops/)-Image, das mit [Cloud Native](https://universal-blue.org/#cloud-native)-Technologie erstellt wurde und das Beste des Linux-Gamings auf **alle deine Geräte bringt – einschließlich deines bevorzugten Handhelds**.
+[AgungOS](https://os.agungdev.com/) ist ein angepasstes [Fedora Atomic](https://fedoraproject.org/atomic-desktops/)-Image, das mit [Cloud Native](https://universal-blue.org/#cloud-native)-Technologie erstellt wurde und das Beste des Linux-Gamings auf **alle deine Geräte bringt – einschließlich deines bevorzugten Handhelds**.
 
 AgungOS basiert auf [ublue-os/main](https://github.com/ublue-os/main) und [ublue-os/nvidia](https://github.com/ublue-os/nvidia) unter Verwendung der [Fedora](https://fedoraproject.org/)-Technologie. Dies bedeutet erweiterte Hardware-Unterstützung und integrierte Treiber. Zusätzlich bietet AgungOS die folgenden Funktionen:
 
@@ -69,7 +69,7 @@ AgungOS basiert auf [ublue-os/main](https://github.com/ublue-os/main) und [ublue
 - Unterstützung für HDMI CEC über [libCEC](https://libcec.pulse-eight.com/).
 - Verwendet standardmäßig [Google's BBR TCP congestion control](https://github.com/google/bbr).
 - [Input Remapper](https://github.com/sezanzeb/input-remapper) vorinstalliert und aktiviert. <sub><sup>(Verfügbar, aber standardmäßig deaktiviert auf der Deck-Variante, kann mit `ujust restore-input-remapper` aktiviert werden)</sup></sub>
-- [Waydroid](https://waydro.id/) vorinstalliert für die Ausführung von Android-Apps. Richte es mit dieser [Kurzanleitung (Englisch)](https://docs.agungos.gg/Installing_and_Managing_Software/Waydroid_Setup_Guide/) ein.
+- [Waydroid](https://waydro.id/) vorinstalliert für die Ausführung von Android-Apps. Richte es mit dieser [Kurzanleitung (Englisch)](https://docs.os.agungdev.com/Installing_and_Managing_Software/Waydroid_Setup_Guide/) ein.
 - Verwalte Anwendungen mit [Flatseal](https://github.com/tchx84/Flatseal), [Warehouse](https://github.com/flattool/warehouse) und [Gear Lever](https://github.com/mijorus/gearlever).
 - [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) i2c-piix4- und i2c-nct6775-Treiber zur Steuerung von RGB auf bestimmten Motherboards.
 - [OpenRazer](https://openrazer.github.io)-Treiber integriert. Führe `ujust install-openrazer` in einem Terminal aus, um es zu verwenden.
@@ -86,7 +86,7 @@ Standardvariante, verfügbar als `agungos`, geeignet für Desktop-Computer.
 - Automatische Updates für das OS, Flatpaks und mehr – angetrieben von [uupd](https://github.com/ublue-os/uupd) und [topgrade](https://github.com/topgrade-rs/topgrade).
 
 > [!IMPORTANT]
-> **ISOs können von unserer [Website](https://download.agungos.gg) heruntergeladen werden, und eine hilfreiche Installationsanleitung findest du [hier](https://docs.agungos.gg/General/Installation_Guide/) (Englisch).**
+> **ISOs können von unserer [Website](https://download.os.agungdev.com) heruntergeladen werden, und eine hilfreiche Installationsanleitung findest du [hier](https://docs.os.agungdev.com/General/Installation_Guide/) (Englisch).**
 
 Rebase von einem bestehenden Upstream Fedora Atomic auf dieses Image, wenn du **Open-Source-GPU-Treiber** nutzen möchtest:
 (Bitte beachte: Mesas Open-Source-Option für NVIDIA GPUs, NVK, ist zum Zeitpunkt der Erstellung dieses Dokuments noch fehleranfällig. Bei Problemen mit NVK [reiche bitte einen Bericht bei Mesa ein](https://docs.mesa3d.org/bugs.html), nicht bei Ublue/AgungOS.)
@@ -134,10 +134,10 @@ Diese Variante wurde für die Nutzung als Alternative zu SteamOS auf dem Steam D
   - Integrierte Unterstützung für Display-Übertaktung. Füge zum Beispiel `CUSTOM_REFRESH_RATES=30-68` zu `/etc/environment` hinzu. Minimale und maximale Bildwiederholraten unterscheiden sich je nach Handheld!
   - 32GB RAM-Mod für dein Steam Deck? Genieße die doppelte maximale VRAM-Menge, automatisch angewendet. <sup><sub>(Kannst du uns deine Lötkenntnisse mitteilen?)</sub></sup>
 - Steam Deck-Hardware-spezifische Dienste können durch Ausführen von `ujust disable-bios-updates` und `ujust disable-firmware-updates` im Terminal deaktiviert werden. Diese werden auf Nicht-Deck-Hardware und auf Decks mit DeckHD-Displays oder 32GB RAM-Mods automatisch deaktiviert.
-- Weitere Informationen zu den AgungOS Steam Deck Images findest du [hier](https://docs.agungos.gg/Handheld_and_HTPC_edition/Steam_Gaming_Mode/).
+- Weitere Informationen zu den AgungOS Steam Deck Images findest du [hier](https://docs.os.agungdev.com/Handheld_and_HTPC_edition/Steam_Gaming_Mode/).
 
 > [!IMPORTANT]
-> **ISOs können von unserer [Website](https://download.agungos.gg) heruntergeladen werden, und eine hilfreiche Installationsanleitung findest du [hier](https://docs.agungos.gg/General/Installation_Guide/) (Englisch).**
+> **ISOs können von unserer [Website](https://download.os.agungdev.com) heruntergeladen werden, und eine hilfreiche Installationsanleitung findest du [hier](https://docs.os.agungdev.com/General/Installation_Guide/) (Englisch).**
 
 Rebase von einem bestehenden Upstream Fedora Atomic auf dieses Image:
 
@@ -147,7 +147,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-d
 
 #### Alternative Handhelds
 
-Bitte beziehe dich auf unser [Handheld-Wiki](https://docs.agungos.gg/Handheld_and_HTPC_edition/Handheld_Wiki/) für notwendige Einstellungen und Decky Loader-Plugins für den Steam Gaming Mode auf deinem spezifischen Handheld.
+Bitte beziehe dich auf unser [Handheld-Wiki](https://docs.os.agungdev.com/Handheld_and_HTPC_edition/Handheld_Wiki/) für notwendige Einstellungen und Decky Loader-Plugins für den Steam Gaming Mode auf deinem spezifischen Handheld.
 
 **Stelle sicher, dass du auch die [hhd-Dokumentation](https://github.com/hhd-dev/hhd#after-install) liest; einige Handhelds erfordern spezifische Einstellungänderungen/Anpassungen, um ordnungsgemäß zu funktionieren.**
 
@@ -170,7 +170,7 @@ Builds mit der GNOME-Desktop-Umgebung sind sowohl in Desktop- als auch in Deck-V
 - Automatische Updates für das [Firefox GNOME Theme](https://github.com/rafaelmardojai/firefox-gnome-theme) und das [Thunderbird GNOME Theme](https://github.com/rafaelmardojai/thunderbird-gnome-theme). <sub><sup>(Falls installiert)</sup></sub>
 
 > [!IMPORTANT]
-> **ISOs können von unserer [Website](https://download.agungos.gg) heruntergeladen werden, und eine hilfreiche Installationsanleitung findest du [hier](https://docs.agungos.gg/General/Installation_Guide/) (Englisch).**
+> **ISOs können von unserer [Website](https://download.os.agungdev.com) heruntergeladen werden, und eine hilfreiche Installationsanleitung findest du [hier](https://docs.os.agungdev.com/General/Installation_Guide/) (Englisch).**
 
 Rebase von einem bestehenden Upstream Fedora Atomic auf dieses Image:
 
@@ -219,7 +219,7 @@ Obwohl dieses Projekt ebenfalls Image-basiert ist, kannst du jedes Fedora-Paket 
 
 AgungOS wird standardmäßig mit dem neuesten Linux-Kernel und aktiviertem SELinux ausgeliefert, mit voller Unterstützung für Secure Boot <sub><sup>(Führe `ujust enroll-secure-boot-key` aus und gib bei Aufforderung das Passwort `universalblue` ein, um unseren Schlüssel zu registrieren)</sup></sub> und Festplattenverschlüsselung, was es zu einer sinnvollen Lösung für den allgemeinen Gebrauch macht. <sup><sub>(Ja, du kannst von AgungOS aus drucken)</sub></sup>
 
-Lese die [FAQ](https://docs.agungos.gg/General/FAQ/) für Details dazu, was AgungOS von anderen Linux-basierten Betriebssystemen unterscheidet.
+Lese die [FAQ](https://docs.os.agungdev.com/General/FAQ/) für Details dazu, was AgungOS von anderen Linux-basierten Betriebssystemen unterscheidet.
 
 ## Galerie
 
@@ -233,11 +233,11 @@ Lese die [FAQ](https://docs.agungos.gg/General/FAQ/) für Details dazu, was Agun
 
 ## Dokumentation
 
-- [Anwendungen installieren und verwalten](https://docs.agungos.gg/Installing_and_Managing_Software/)
-- [Updates, Rollbacks und Rebasing](https://docs.agungos.gg/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/)
-- [Gaming-Anleitung](https://docs.agungos.gg/Gaming/)
+- [Anwendungen installieren und verwalten](https://docs.os.agungdev.com/Installing_and_Managing_Software/)
+- [Updates, Rollbacks und Rebasing](https://docs.os.agungdev.com/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/)
+- [Gaming-Anleitung](https://docs.os.agungdev.com/Gaming/)
 
-Sieh dir [weitere Dokumentation](http://docs.agungos.gg/) zum Projekt an.
+Sieh dir [weitere Dokumentation](http://docs.os.agungdev.com/) zum Projekt an.
 
 ## Verifizierung
 
@@ -309,4 +309,4 @@ Wir liefern auch eine Konfiguration für die beliebte [Pull-App](https://github.
 
 - Folge Universal Blue auf [Mastodon](https://fosstodon.org/@UniversalBlue).
 
-[**Sieh dir die vollständige Liste der AgungOS-Ressourcen und der sozialen Präsenz an**](https://docs.agungos.gg/Resources/).
+[**Sieh dir die vollständige Liste der AgungOS-Ressourcen und der sozialen Präsenz an**](https://docs.os.agungdev.com/Resources/).

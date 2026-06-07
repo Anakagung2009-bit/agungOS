@@ -28,7 +28,7 @@ Examples:
   $(basename "$0") rebase testing
   $(basename "$0") rebase agungos-gnome:stable
 
-For help: https://discord.agungos.gg"
+For help: https://discord.os.agungdev.com"
 
 VARIANTS=(
   "agungos"

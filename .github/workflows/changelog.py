@@ -8,7 +8,7 @@ from typing import Any
 import re
 from collections import defaultdict
 
-REGISTRY = "ghcr.io/Anakagung2009-bit/"
+REGISTRY = "ghcr.io/anakagung2009-bit/"
 
 IMAGES = [
     "agungos",

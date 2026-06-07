@@ -83,7 +83,7 @@ setup-sunshine ACTION="":
       echo "You will need to either: "
       echo "  1) obtain and install the beta flatpak manually from their GitHub repository;"
       echo "  2) or proceed with the experimental Brew package."
-      echo "Only proceed if you know what you are doing. Read http://docs.agungos.gg/Advanced/sunshine/#installing-sunshine-beta to learn more."
+      echo "Only proceed if you know what you are doing. Read http://docs.os.agungdev.com/Advanced/sunshine/#installing-sunshine-beta to learn more."
       if confirm "Confirm to proceed with installing the experimental Brew beta package? (This will remove your existing Sunshine installation!)"; then
         echo "Disabling any previous Sunshine services..."
         systemctl --user disable --now app-dev.lizardbyte.app.Sunshine.service || true

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://agungos.gg/">
+  <a href="https://os.agungdev.com/">
     <picture>
       <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
       <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
@@ -12,7 +12,7 @@
 # [🇺🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README.md) [🇪🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-SPA.md) [🇮🇩](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ID.md) [🇨🇳](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-zh-cn.md) [🇫🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-FR.md) [🇧🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-BR.md) [🇳🇱](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-NL.md) [🇷🇺](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-RU.md) [🇩🇪](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-DE.md) [🇹🇼](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ZH-TW.md)
 
 <p align="center">
-  <a href="https://download.agungos.gg/"><img src="/repo_content/download.png?raw=true" alt="下載 AgungOS"/></a>
+  <a href="https://download.os.agungdev.com/"><img src="/repo_content/download.png?raw=true" alt="下載 AgungOS"/></a>
 </p>
 
 ---
@@ -42,9 +42,9 @@
 
 ## 關於 & 功能
 
-[請看我們的網站](https://agungos.gg/) 獲得 AgungOS 的新手入門解說。這個 readme 將深入探討所有細節。
+[請看我們的網站](https://os.agungdev.com/) 獲得 AgungOS 的新手入門解說。這個 readme 將深入探討所有細節。
 
-[AgungOS](https://agungos.gg/) 是一個透過 [原生雲端](https://universal-blue.org/#cloud-native) 技術建立的自訂 [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) 映像檔，將最好的 Linux 遊戲體驗帶入**您所有的裝置 - 包含您最喜愛的掌上型裝置**。
+[AgungOS](https://os.agungdev.com/) 是一個透過 [原生雲端](https://universal-blue.org/#cloud-native) 技術建立的自訂 [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) 映像檔，將最好的 Linux 遊戲體驗帶入**您所有的裝置 - 包含您最喜愛的掌上型裝置**。
 
 AgungOS 採用 [Fedora](https://fedoraproject.org/) 技術並透過 [ublue-os/main](https://github.com/ublue-os/main) 與 [ublue-os/nvidia](https://github.com/ublue-os/nvidia) 打造而成，這意味著它包含了更廣泛的硬體支援與內建驅動程式。此外，AgungOS 還增加了以下功能：
 
@@ -66,7 +66,7 @@ AgungOS 採用 [Fedora](https://fedoraproject.org/) 技術並透過 [ublue-os/ma
 - 預設使用 [Google 的 BBR TCP 擁塞控制 (congestion control)](https://github.com/google/bbr)。
 - 預裝並啟用 [Input Remapper](https://github.com/sezanzeb/input-remapper)。 <sub><sup>(在 Deck 版本中可用但預設停用，可透過 `ujust restore-input-remapper` 啟用)</sup></sub>
 - [AgungOS Portal](https://github.com/ublue-os/yafti-gtk) 提供了一種簡單的方法來安裝眾多應用程式與調校，包括透過 Brew 安裝 [LACT](https://github.com/ilya-zlobintsev/LACT) 和 IDE。此外，它還提供了簡單的按鈕來更新、重定基底 (rebase)，甚至將系統映像檔重設為預設值。
-- 預裝 [Waydroid](https://waydro.id/) 以執行 Android 應用程式。請透過此 [快速指南](https://docs.agungos.gg/Installing_and_Managing_Software/Waydroid_Setup_Guide/) 進行設定。
+- 預裝 [Waydroid](https://waydro.id/) 以執行 Android 應用程式。請透過此 [快速指南](https://docs.os.agungdev.com/Installing_and_Managing_Software/Waydroid_Setup_Guide/) 進行設定。
 - 使用 [Flatseal](https://github.com/tchx84/Flatseal)、[Warehouse](https://github.com/flattool/warehouse) 與 [Gear Lever](https://github.com/mijorus/gearlever) 管理應用程式。
 - [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) i2c-piix4 與 i2c-nct6775 驅動程式，用於控制特定主機板上的 RGB。
 - 內建 [OpenRazer](https://openrazer.github.io) 驅動程式。在 AgungOS Portal 中選擇 OpenRazer 或在終端機中執行 `ujust install-openrazer` 即可開始使用。
@@ -83,7 +83,7 @@ AgungOS 採用 [Fedora](https://fedoraproject.org/) 技術並透過 [ublue-os/ma
 - 作業系統、Flatpak 等皆會自動更新 - 由 [uupd](https://github.com/ublue-os/uupd) 與 [topgrade](https://github.com/topgrade-rs/topgrade) 驅動。
 
 > [!IMPORTANT]
-> **ISO 映像檔可從我們的 [網站](https://download.agungos.gg) 下載，並可在此找到實用的 [安裝指南](https://docs.agungos.gg/General/Installation_Guide/)。**
+> **ISO 映像檔可從我們的 [網站](https://download.os.agungdev.com) 下載，並可在此找到實用的 [安裝指南](https://docs.os.agungdev.com/General/Installation_Guide/)。**
 
 若您想要使用 **開源 GPU 驅動程式**，可從現有的上游 Fedora Atomic 重定基底 (Rebase) 至此映像檔：
 (請注意：Mesa 對於 NVIDIA GPU 的開源選項 NVK，在撰寫本文時仍容易出錯。若有任何關於 NVK 的問題，[請向 Mesa 提交報告]([url](https://docs.mesa3d.org/bugs.html))，而非 Ublue/AgungOS)
@@ -130,10 +130,10 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-n
     - 內建螢幕超頻支援。例如，新增 `CUSTOM_REFRESH_RATES=30-68` 至 `/etc/environment`。最小與最大更新率因掌上機而異！
     - 您有將 Steam Deck 改裝為 32GB RAM 嗎？享受雙倍的最大 VRAM 容量，將自動套用。<sup><sub>(可以分享一下您的焊接技巧嗎？)</sub></sup>
 - Steam Deck 硬體專屬服務可透過在終端機執行 `ujust disable-bios-updates` 和 `ujust disable-firmware-updates` 來停用。這些服務在非 Deck 硬體，以及擁有 DeckHD 螢幕或 32GB RAM 改裝的 Deck 上會自動停用。
-- 更多關於 AgungOS Steam Deck 映像檔的資訊可以在 [這裡](https://docs.agungos.gg/Handheld_and_HTPC_edition/Steam_Gaming_Mode/) 找到。
+- 更多關於 AgungOS Steam Deck 映像檔的資訊可以在 [這裡](https://docs.os.agungdev.com/Handheld_and_HTPC_edition/Steam_Gaming_Mode/) 找到。
 
 > [!IMPORTANT]
-> **ISO 映像檔可從我們的 [網站](https://download.agungos.gg) 下載，並可在此找到實用的 [安裝指南](https://docs.agungos.gg/General/Installation_Guide/)。**
+> **ISO 映像檔可從我們的 [網站](https://download.os.agungdev.com) 下載，並可在此找到實用的 [安裝指南](https://docs.os.agungdev.com/General/Installation_Guide/)。**
 
 從現有的上游 Fedora Atomic 重定基底 (Rebase) 至此映像檔：
 
@@ -143,7 +143,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-d
 
 #### 其他的掌上型裝置
 
-請參考我們的 [掌上型裝置 Wiki](https://docs.agungos.gg/Handheld_and_HTPC_edition/Handheld_Wiki/)，了解您特定掌上型裝置在 Steam 遊戲模式下所需的設定變更與 Decky Loader 外掛程式。
+請參考我們的 [掌上型裝置 Wiki](https://docs.os.agungdev.com/Handheld_and_HTPC_edition/Handheld_Wiki/)，了解您特定掌上型裝置在 Steam 遊戲模式下所需的設定變更與 Decky Loader 外掛程式。
 
 **請務必閱讀 [hhd 文件](https://github.com/hhd-dev/hhd#after-install)，部分掌上機需要特定的設定變更/調整才能正常運作。**
 
@@ -165,7 +165,7 @@ GNOME 桌面環境的版本同時提供桌面版 (desktop) 與掌機版 (deck)�
 - 自動更新 [Firefox GNOME 主題](https://github.com/rafaelmardojai/firefox-gnome-theme) 與 [Thunderbird GNOME 主題](https://github.com/rafaelmardojai/thunderbird-gnome-theme)。<sup><sub>(如果已安裝)</sub></sup>
 
 > [!IMPORTANT]
-> **ISO 映像檔可從我們的 [網站](https://download.agungos.gg) 下載，並可在此找到實用的 [安裝指南](https://docs.agungos.gg/General/Installation_Guide/)。**
+> **ISO 映像檔可從我們的 [網站](https://download.os.agungdev.com) 下載，並可在此找到實用的 [安裝指南](https://docs.os.agungdev.com/General/Installation_Guide/)。**
 
 從現有的上游 Fedora Atomic 重定基底 (Rebase) 至此映像檔：
 
@@ -214,7 +214,7 @@ AgungOS 最初是一個旨在解決 SteamOS 一些問題的專案，主要是過
 
 AgungOS 預設啟用最新的 Linux 核心和 SELinux，並完整支援安全啟動 <sub><sup>(若提示輸入密碼以註冊我們的金鑰，請執行 `ujust enroll-secure-boot-key` 並輸入密碼 `universalblue`)</sup></sub> 和磁碟加密，使其成為一般電腦使用的明智解決方案。<sup><sub>(是的，您可以從 AgungOS 列印)</sub></sup>
 
-閱讀 [常見問題 (FAQ)](https://docs.agungos.gg/General/FAQ/) 了解 AgungOS 與其他基於 Linux 的作業系統有何不同。
+閱讀 [常見問題 (FAQ)](https://docs.os.agungdev.com/General/FAQ/) 了解 AgungOS 與其他基於 Linux 的作業系統有何不同。
 
 ## 展示櫃
 
@@ -228,11 +228,11 @@ AgungOS 預設啟用最新的 Linux 核心和 SELinux，並完整支援安全啟
 
 ## 文件
 
-- [安裝與管理應用程式](https://docs.agungos.gg/Installing_and_Managing_Software/)
-- [更新、還原與重定基底](https://docs.agungos.gg/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/)
-- [遊戲指南](https://docs.agungos.gg/Gaming/)
+- [安裝與管理應用程式](https://docs.os.agungdev.com/Installing_and_Managing_Software/)
+- [更新、還原與重定基底](https://docs.os.agungdev.com/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/)
+- [遊戲指南](https://docs.os.agungdev.com/Gaming/)
 
-查看關於此專案的 [更多文件](http://docs.agungos.gg/)。
+查看關於此專案的 [更多文件](http://docs.os.agungdev.com/)。
 
 ## 驗證
 
@@ -304,4 +304,4 @@ AgungOS 完全在 GitHub 上建置，建立您自己的自訂版本非常簡單�
 
 - 在 [Mastodon](https://fosstodon.org/@UniversalBlue) 上追蹤 Universal Blue。
 
-[**查看完整的 AgungOS 資源與社群列表**](https://docs.agungos.gg/Resources/)。
+[**查看完整的 AgungOS 資源與社群列表**](https://docs.os.agungdev.com/Resources/)。

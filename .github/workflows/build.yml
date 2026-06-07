@@ -163,7 +163,7 @@ jobs:
         id: download_offline_docs
         continue-on-error: true
         env:
-          docs_repo: ublue-os/docs.agungos.gg
+          docs_repo: ublue-os/docs.os.agungdev.com
           GH_TOKEN: ${{ github.token }}
         run: |
           DOCS_DIR="${{ github.workspace }}/system_files/desktop/shared/usr/share/ublue-os/docs/html"
@@ -328,10 +328,10 @@ jobs:
             org.opencontainers.image.description=AgungOS is a custom image that brings the best of Linux gaming to all of your devices - including your favorite handheld.
             org.opencontainers.image.licenses=Apache-2.0
             org.opencontainers.image.revision=${{ github.sha }}
-            org.opencontainers.image.source=https://agungos.gg
+            org.opencontainers.image.source=https://os.agungdev.com
             org.opencontainers.image.title=AgungOS
             org.opencontainers.image.vendor=Universal Blue
-            org.opencontainers.image.url=https://agungos.gg
+            org.opencontainers.image.url=https://os.agungdev.com
         run: |
           version="${{ matrix.fedora_version }}.$(date  +%Y%m%d)"
           if [[ "${{ github.ref_name }}" == "unstable" ]]; then

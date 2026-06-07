@@ -22,7 +22,7 @@ configure-waydroid ACTION="":
       exit 0
     elif [ "$OPTION" == "" ]; then
       echo "${bold}Waydroid Setup${normal}"
-      echo "Please read the $(Urllink "https://docs.agungos.gg/Installing_and_Managing_Software/Waydroid_Setup_Guide/" "Waydroid setup documentation") before continuing"
+      echo "Please read the $(Urllink "https://docs.os.agungdev.com/Installing_and_Managing_Software/Waydroid_Setup_Guide/" "Waydroid setup documentation") before continuing"
       OPTION=$(Choose "Initialize Waydroid" "Configure Waydroid" "Select GPU for Waydroid" "Reset Waydroid (also removes waydroid-related files from user folder)" "Install waydroid-helper (https://github.com/waydroid-helper/waydroid-helper)")
     fi
     if [[ "${OPTION,,}" =~ ^init ]]; then

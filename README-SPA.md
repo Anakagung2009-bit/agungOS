@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://agungos.gg/">
+  <a href="https://os.agungdev.com/">
     <picture>
       <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
       <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
@@ -12,12 +12,12 @@
 # [🇺🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README.md) [🇪🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-SPA.md) [🇮🇩](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ID.md) [🇫🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-FR.md) [🇧🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-BR.md) [🇳🇱](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-NL.md) [🇹🇼](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ZH-TW.md)
 
 <p align="center">
-  <a href="https://agungos.gg/#image-picker"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
+  <a href="https://os.agungdev.com/#image-picker"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
 </p>
 
 ---
 # Seleccionador de Imágenes
-Usa nuestro [seleccionador de imágenes](https://agungos.gg/#image-picker) para encontrar la imagen correcta basada en tu hardware y tus preferencias.
+Usa nuestro [seleccionador de imágenes](https://os.agungdev.com/#image-picker) para encontrar la imagen correcta basada en tu hardware y tus preferencias.
 
 # Tabla de Contenidos
 - [🇺🇸 🇪🇸 🇮🇩 🇫🇷 🇧🇷 🇳🇱 🇹🇼](#------)
@@ -46,7 +46,7 @@ Usa nuestro [seleccionador de imágenes](https://agungos.gg/#image-picker) para 
 
 ## Acerca de y Características
 
-[AgungOS](https://agungos.gg/) es una imagen OCI que sirve como un sistema operativo alterno para la [Steam Deck](https://www.steamdeck.com/), y como un sistema tipo SteamOS listo para jugar para computadoras de
+[AgungOS](https://os.agungdev.com/) es una imagen OCI que sirve como un sistema operativo alterno para la [Steam Deck](https://www.steamdeck.com/), y como un sistema tipo SteamOS listo para jugar para computadoras de
 escritorio, computadoras para cine en casa (HTPC), y un sinnúmero de
 otras computadoras portátiles.
 
@@ -254,7 +254,7 @@ Lee nuestras [preguntas frecuentes](https://universal-blue.discourse.group/docs?
 - [Guía para Jugar en Linux](https://universal-blue.discourse.group/docs?topic=31)
 - [Guía para Configurar el Arranque Dual con Windows (Dual Boot)](https://universal-blue.discourse.group/docs?topic=129)
 
-Puedes encontrar documentación adicional relacionada al proyecto [aquí](http://docs.agungos.gg/).
+Puedes encontrar documentación adicional relacionada al proyecto [aquí](http://docs.os.agungdev.com/).
 
 Checa nuestros [boletines informativos (disponibles en español](https://universal-blue.discourse.group/tag/agungos-buzz), estos son publicados regularmente y los cuales hablan de las últimas actualizaciones del proyecto.
 

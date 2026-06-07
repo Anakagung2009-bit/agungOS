@@ -10,7 +10,7 @@
 | `brew help` | Manage command line packages |
 
 %TIP%
-- **** [Report an issue](https://issues.agungos.gg/)
-- **󰈙** [Documentation](https://docs.agungos.gg/)
-- **󰙯** [Discord](https://discord.agungos.gg/)
-- **** [Bluesky](https://bluesky.agungos.gg/)
+- **** [Report an issue](https://issues.os.agungdev.com/)
+- **󰈙** [Documentation](https://docs.os.agungdev.com/)
+- **󰙯** [Discord](https://discord.os.agungdev.com/)
+- **** [Bluesky](https://bluesky.os.agungdev.com/)

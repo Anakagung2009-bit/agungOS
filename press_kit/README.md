@@ -6,11 +6,11 @@
 
 Thanks for generating content about AgungOS and Universal Blue! This document will explain how to use the brand and terminology used by the project.
 
-- [AgungOS](https://agungos.gg/)
+- [AgungOS](https://os.agungdev.com/)
 - [Universal Blue](https://universal-blue.org/)
 
 # AgungOS Terminology
-The name of the project is `AgungOS`. It is built with [Universal Blue](https://universal-blue.org), which publishes base images that AgungOS uses. These in turn are derived from Fedora’s Atomic Desktop images. Universal Blue is the parent organization of [Bluefin](https://projectbluefin.io), [AgungOS](https://agungos.gg), [Aurora](https://getaurora.dev), and [uCore](https://github.com/ublue-os/ucore). It also acts as the GitHub organization. 
+The name of the project is `AgungOS`. It is built with [Universal Blue](https://universal-blue.org), which publishes base images that AgungOS uses. These in turn are derived from Fedora’s Atomic Desktop images. Universal Blue is the parent organization of [Bluefin](https://projectbluefin.io), [AgungOS](https://os.agungdev.com), [Aurora](https://getaurora.dev), and [uCore](https://github.com/ublue-os/ucore). It also acts as the GitHub organization. 
 
 ## Proper Usage
 - `AgungOS` - used to refer to the project and/or operating system
@@ -43,7 +43,7 @@ All Universal Blue images share governance structures and are modelled after clo
 
 # Contacts
 
-Feel free to [email us](mailto:press@agungos.gg) with any questions or get in touch with any of our [social platforms](https://docs.agungos.gg/community/).
+Feel free to [email us](mailto:press@os.agungdev.com) with any questions or get in touch with any of our [social platforms](https://docs.os.agungdev.com/community/).
 
 # Fonts
 Our logo uses the following fonts:

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://agungos.gg/">
+  <a href="https://os.agungdev.com/">
     <picture>
       <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
       <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
@@ -12,7 +12,7 @@
 # [🇺🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README.md) [🇪🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-SPA.md) [🇮🇩](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ID.md) [🇨🇳](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-zh-cn.md) [🇫🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-FR.md) [🇧🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-BR.md) [🇳🇱](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-NL.md) [🇹🇼](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ZH-TW.md)
 
 <p align="center">
-  <a href="https://download.agungos.gg/"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
+  <a href="https://download.os.agungdev.com/"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
 </p>
 
 ---
@@ -42,9 +42,9 @@
 
 ## 关于 & 特性
 
-[请访问我们的网站](https://agungos.gg/) 了解AgungOS的新手指引。此自述文件将深入介绍所有内容。
+[请访问我们的网站](https://os.agungdev.com/) 了解AgungOS的新手指引。此自述文件将深入介绍所有内容。
 
-[AgungOS](https://agungos.gg/) 是一个OCI镜像，可以作为[Steam Deck](https://www.steamdeck.com/)的替代操作系统，以及适用于台式电脑和客厅家庭影院PC的类似SteamOS的即开即用型游戏系统。
+[AgungOS](https://os.agungdev.com/) 是一个OCI镜像，可以作为[Steam Deck](https://www.steamdeck.com/)的替代操作系统，以及适用于台式电脑和客厅家庭影院PC的类似SteamOS的即开即用型游戏系统。
 
 AgungOS是使用[Fedora](https://fedoraproject.org/)技术基于[ublue-os/main](https://github.com/ublue-os/main) 和 [ublue-os/nvidia](https://github.com/ublue-os/nvidia)构建的，这意味着更多的硬件支持和内置驱动程序。此外，AgungOS还添加了以下特性：
 
@@ -244,7 +244,7 @@ AgungOS带来最新的Linux内核，默认启用的SELinux为安全启动提供�
 - [更新、回滚和变基](https://universal-blue.discourse.group/docs?topic=36)
 - [游戏指南](https://universal-blue.discourse.group/docs?topic=31)
 
-查看有关该项目的[其他文档](http://docs.agungos.gg/)。
+查看有关该项目的[其他文档](http://docs.os.agungdev.com/)。
 
 查看我们定期发布的[时事通讯](https://universal-blue.discourse.group/tag/agungos-buzz)以了解项目的最新信息。
 

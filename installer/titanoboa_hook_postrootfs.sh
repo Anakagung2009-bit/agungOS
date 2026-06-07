@@ -22,7 +22,7 @@ imageref="${imageref%%:*}"
 imagetag="$(podman images --format '{{ .Tag }}\n' "$imageref" | head -1)"
 sbkey='https://github.com/ublue-os/akmods/raw/main/certs/public_key.der'
 SECUREBOOT_KEY="/usr/share/ublue-os/sb_pubkey.der"
-SECUREBOOT_DOC_URL="https://docs.agungos.gg/sb"
+SECUREBOOT_DOC_URL="https://docs.os.agungdev.com/sb"
 SECUREBOOT_DOC_URL_QR="/usr/share/ublue-os/secure_boot_qr.png"
 
 # AgungOS anaconda profile

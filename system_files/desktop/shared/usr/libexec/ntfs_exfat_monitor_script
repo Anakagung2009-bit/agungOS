@@ -7,7 +7,7 @@ secondbutton=""
 sender="AgungOS"
 header=""
 warning=""
-documentation="https://docs.agungos.gg/Gaming/Hardware_compatibility_for_gaming/#unsupported-filesystems-for-secondary-drives"
+documentation="https://docs.os.agungdev.com/Gaming/Hardware_compatibility_for_gaming/#unsupported-filesystems-for-secondary-drives"
 
 #set other variables
 counter="0"

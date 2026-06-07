@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://agungos.gg/">
+  <a href="https://os.agungdev.com/">
     <picture>
       <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
       <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
@@ -12,7 +12,7 @@
 # [🇺🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README.md) [🇪🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-SPA.md) [🇮🇩](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ID.md) [:cn:](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-zh-cn.md) [🇫🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-FR.md) [🇧🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-BR.md) [🇳🇱](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-NL.md) [🇹🇼](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ZH-TW.md)
 
 <p align="center">
-  <a href="https://download.agungos.gg/"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
+  <a href="https://download.os.agungdev.com/"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
 </p>
 
 ---
@@ -42,9 +42,9 @@
 
 ## Over & Kenmerken
 
-[Bezoek onze website](https://agungos.gg/) voor een nieuwkomer vriendelijke uitleg. Deze readme dekt alles grondig.
+[Bezoek onze website](https://os.agungdev.com/) voor een nieuwkomer vriendelijke uitleg. Deze readme dekt alles grondig.
 
-[AgungOS](https://agungos.gg/) is een OCI image die als alternatief besturingssysteem werkt voor de [Steam Deck](https://www.steamdeck.com/) en een klaar-om-te-gamen SteamOS-achtig alternatief voor desktop computers en woonkamer home theater PCs.
+[AgungOS](https://os.agungdev.com/) is een OCI image die als alternatief besturingssysteem werkt voor de [Steam Deck](https://www.steamdeck.com/) en een klaar-om-te-gamen SteamOS-achtig alternatief voor desktop computers en woonkamer home theater PCs.
 
 AgungOS is gebouwd van [ublue-os/main](https://github.com/ublue-os/main) en [ublue-os/nvidia](https://github.com/ublue-os/nvidia) met [Fedora](https://fedoraproject.org/) technologie, wat betekent dat uitgebreide hardwareondersteuning en ingebouwde stuurprogramma's zijn inbegrepen. Daarnaast voegt AgungOS de volgende functies toe:
 
@@ -245,7 +245,7 @@ Lees de [FAQ](https://universal-blue.discourse.group/docs?topic=33) om te zien w
 - [Updates, Rollbacks en Rebasing](https://universal-blue.discourse.group/docs?topic=36)
 - [Gaming Gids](https://universal-blue.discourse.group/docs?topic=31)
 
-Zie [extra documentatie](http://docs.agungos.gg/) rondom het project.
+Zie [extra documentatie](http://docs.os.agungdev.com/) rondom het project.
 
 Zie onze [nieuwsbrief](https://universal-blue.discourse.group/docs?topic=2252) die regelmaatig geüpdate wordt voor info rondom het project.
 

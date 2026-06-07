@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://agungos.gg/">
+  <a href="https://os.agungdev.com/">
     <picture>
       <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
       <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
@@ -13,7 +13,7 @@
 
 
 <p align="center">
-  <a href="https://agungos.gg/#image-picker"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
+  <a href="https://os.agungdev.com/#image-picker"><img src="/repo_content/download.png?raw=true" alt="Download AgungOS"/></a>
 </p>
 
 ---
@@ -226,7 +226,7 @@ Baca [FAQ](https://universal-blue.discourse.group/docs?topic=33) untuk tahu apa 
 - [Panduan Gim](https://universal-blue.discourse.group/docs?topic=31)
 - [Panduan dual booting](https://universal-blue.discourse.group/docs?topic=129)
 
-Temukan dokumentasi tambahan project ini [disini](http://docs.agungos.gg/).
+Temukan dokumentasi tambahan project ini [disini](http://docs.os.agungdev.com/).
 
 Cek [buletin](https://universal-blue.discourse.group/tag/agungos-buzz) kami yang selalu update secara regular tentang proyek ini.
 

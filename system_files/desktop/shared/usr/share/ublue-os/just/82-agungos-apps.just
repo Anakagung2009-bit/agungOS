@@ -57,7 +57,7 @@ install-coolercontrol ACTION="":
     install_coolercontrol() {
         echo '{{ YELLOW }}This recipe will proceed to {{ BOLD }}layer{{ NORMAL }} {{ YELLOW }}CoolerControl{{ NORMAL }}.'
         echo '{{ YELLOW }}If updates start to fail, please use "{{ BOLD }}rpm-ostree reset{{ NORMAL }}"'
-        echo '{{ YELLOW }}See https://docs.agungos.gg/Installing_and_Managing_Software/rpm-ostree/#major-caveats-using-rpm-ostree{{ NORMAL }}'
+        echo '{{ YELLOW }}See https://docs.os.agungdev.com/Installing_and_Managing_Software/rpm-ostree/#major-caveats-using-rpm-ostree{{ NORMAL }}'
 
         packages=()
         for pkg in liquidctl coolercontrol; do
@@ -170,7 +170,7 @@ install-displaylink ACTION="":
     install_displaylink() {
         echo '{{ YELLOW }}This recipe will proceed to {{ BOLD }}layer{{ NORMAL }} {{ YELLOW }}DisplayLink{{ NORMAL }}.'
         echo '{{ YELLOW }}If updates start to fail, please use "{{ BOLD }}rpm-ostree reset{{ NORMAL }}"'
-        echo '{{ YELLOW }}See https://docs.agungos.gg/Installing_and_Managing_Software/rpm-ostree/#major-caveats-using-rpm-ostree{{ NORMAL }}'
+        echo '{{ YELLOW }}See https://docs.os.agungdev.com/Installing_and_Managing_Software/rpm-ostree/#major-caveats-using-rpm-ostree{{ NORMAL }}'
 
         packages=()
         for pkg in displaylink; do

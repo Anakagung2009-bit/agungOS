@@ -28,7 +28,7 @@ ${bold}Examples:${normal}
   $(basename "$0") add-edid
   $(basename "$0") dump-edid
 
-${bold}For help${normal}: https://discord.agungos.gg
+${bold}For help${normal}: https://discord.os.agungdev.com
 "
 
 #Utility functions, mostly copied from brh
@@ -415,7 +415,7 @@ if [[ "$BASE_IMAGE_NAME" == "kinoite" ]]; then
    echo "
 ${green}KDE Plasma 6.6${normal} adds the ability to add ${bold}custom resolutions${normal} in ${green}kscreen-doctor${normal}!
 Use that instead if you do not need a custom resolution for Game Mode or Sunshine.
-An updated guide is available on ${bold}https://docs.agungos.gg/Advanced/custom_resolution/${normal}
+An updated guide is available on ${bold}https://docs.os.agungdev.com/Advanced/custom_resolution/${normal}
 "
    press_any_key
 fi

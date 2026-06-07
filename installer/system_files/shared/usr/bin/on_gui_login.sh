@@ -130,8 +130,8 @@ nvidia_hardware_helper() {
         #user facing text
         title="AgungOS Hardware Helper"
         image_detected="Detected AgungOS version: $(echo "$image_name" |  cut -d '/' -f3)\n\n"
-        qrencode -o "\$SUPPORT_QR" "https://discord.agungos.gg"
-        support="\n\n\nPlease join our <a href=\"https://discord.agungos.gg\"><b>Discord Server</b></a> (scan the QR code) for support."
+        qrencode -o "\$SUPPORT_QR" "https://discord.os.agungdev.com"
+        support="\n\n\nPlease join our <a href=\"https://discord.os.agungdev.com\"><b>Discord Server</b></a> (scan the QR code) for support."
         heading_nvidia_deck="<b>STEAM GAMING MODE IN BETA ON NVIDIA HARDWARE</b>\n"
         detected_nvidia_deck="WARNING: Nvidia GPU Support in Steam Gaming mode and on HTPCs is available as a beta with known issues that <b>cannot be fixed</b> by AgungOS.\n\n"
         recommend_nvidia_deck="Unless you're a Linux driver developer, or looking for a known-broken toy to play with, we <b>strongly recommend</b> using one of our Desktop images without Steam Gaming Mode."

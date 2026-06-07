@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://agungos.gg/">
+  <a href="https://os.agungdev.com/">
     <picture>
       <source srcset="repo_content/AgungOS_Light.svg" media="(prefers-color-scheme: dark)">
       <img src="repo_content/AgungOS.svg" alt="AgungOS"/>
@@ -12,7 +12,7 @@
 # [🇺🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README.md) [🇪🇸](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-SPA.md) [🇮🇩](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ID.md) [🇨🇳](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-zh-cn.md) [🇫🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-FR.md) [🇧🇷](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-BR.md) [🇳🇱](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-NL.md) [🇷🇺](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-RU.md) [🇩🇪](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-DE.md) [🇹🇼](https://github.com/Anakagung2009-bit/AgungOS/blob/main/README-ZH-TW.md)
 
 <p align="center">
-  <a href="https://download.agungos.gg/"><img src="/repo_content/download.png?raw=true" alt="Скачать AgungOS"/></a>
+  <a href="https://download.os.agungdev.com/"><img src="/repo_content/download.png?raw=true" alt="Скачать AgungOS"/></a>
 </p>
 
 ---
@@ -43,9 +43,9 @@
 
 ## О проекте и особенности
 
-[Посетите наш сайт](https://agungos.gg/) для понятного объяснения, что такое AgungOS. Этот README подробнее раскрывает проект.
+[Посетите наш сайт](https://os.agungdev.com/) для понятного объяснения, что такое AgungOS. Этот README подробнее раскрывает проект.
 
-[AgungOS](https://agungos.gg/) - это пользовательский [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) образ, собранный на базе [cloud native](https://universal-blue.org/#cloud-native) технологий и дающий лучший Linux-опыт для игр **на всех ваших устройствах, включая любимые портативные**.
+[AgungOS](https://os.agungdev.com/) - это пользовательский [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) образ, собранный на базе [cloud native](https://universal-blue.org/#cloud-native) технологий и дающий лучший Linux-опыт для игр **на всех ваших устройствах, включая любимые портативные**.
 
 AgungOS собирается на основе [ublue-os/main](https://github.com/ublue-os/main) с использованием технологий [Fedora](https://fedoraproject.org/), поэтому в него входят расширенная поддержка оборудования и встроенные драйверы. Кроме того, AgungOS добавляет следующие возможности:
 
@@ -67,7 +67,7 @@ AgungOS собирается на основе [ublue-os/main](https://github.co
 - По умолчанию используется [BBR TCP от Google](https://github.com/google/bbr).
 - [Input Remapper](https://github.com/sezanzeb/input-remapper) предустановлен и включен. *(Доступен, но отключен по умолчанию в варианте Deck; можно включить командой `ujust restore-input-remapper`)*
 - [AgungOS Portal](https://github.com/ublue-os/yafti-gtk) позволяет легко устанавливать множество приложений и настроек, включая [LACT](https://github.com/ilya-zlobintsev/LACT) и IDE через Brew. В нем также есть удобные кнопки для обновления, перехода на другой образ и даже сброса системного образа к настройкам по умолчанию.
-- [Waydroid](https://waydro.id/) предустановлен для запуска Android-приложений. Настройка описана в [кратком руководстве](https://docs.agungos.gg/Installing_and_Managing_Software/Waydroid_Setup_Guide/).
+- [Waydroid](https://waydro.id/) предустановлен для запуска Android-приложений. Настройка описана в [кратком руководстве](https://docs.os.agungdev.com/Installing_and_Managing_Software/Waydroid_Setup_Guide/).
 - Управляйте приложениями с помощью [Flatseal](https://github.com/tchx84/Flatseal), [Warehouse](https://github.com/flattool/warehouse) и [Gear Lever](https://github.com/mijorus/gearlever).
 - [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) с драйверами i2c-piix4 и i2c-nct6775 для управления RGB на некоторых материнских платах.
 - [OpenRazer](https://openrazer.github.io) встроен, выберите OpenRazer в AgungOS Portal или выполните `ujust install-openrazer` в терминале, чтобы начать использовать его.
@@ -83,7 +83,7 @@ AgungOS собирается на основе [ublue-os/main](https://github.co
 - Автоматические обновления ОС, Flatpak и многого другого, которые обеспечивают [uupd](https://github.com/ublue-os/uupd) и [topgrade](https://github.com/topgrade-rs/topgrade).
 
 > [!IMPORTANT]
-> **ISO-образы можно скачать с нашего [сайта](https://download.agungos.gg), а полезное руководство по установке доступно [здесь](https://docs.agungos.gg/General/Installation_Guide/).**
+> **ISO-образы можно скачать с нашего [сайта](https://download.os.agungdev.com), а полезное руководство по установке доступно [здесь](https://docs.os.agungdev.com/General/Installation_Guide/).**
 
 Чтобы перейти с существующего Fedora Atomic на этот образ, если вам нужны **драйверы GPU с открытым кодом**:
 (Обратите внимание: открытый вариант Mesa для GPU NVIDIA, NVK, по-прежнему может содержать ошибки. Если у вас есть проблемы, связанные с NVK, [сообщайте о них в Mesa](https://docs.mesa3d.org/bugs.html), а не в Ublue/AgungOS.)
@@ -130,10 +130,10 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-n
   - Поддержка разгона дисплея. Например, добавьте `CUSTOM_REFRESH_RATES=30-68` в `/etc/environment`. Минимальная и максимальная частоты обновления зависят от устройства.
   - У вас Steam Deck с модом на 32GB RAM? Наслаждайтесь автоматически применяемым удвоенным максимумом VRAM. *(Можете ли вы поделиться своими навыками пайки?)*
 - Аппаратные сервисы Steam Deck можно отключить командой `ujust disable-bios-updates` и `ujust disable-firmware-updates` в терминале. На не-Deck оборудовании и на Deck с экранами DeckHD или модами 32GB RAM они отключены автоматически.
-- Дополнительную информацию можно найти [здесь](https://docs.agungos.gg/Handheld_and_HTPC_edition/Steam_Gaming_Mode/).
+- Дополнительную информацию можно найти [здесь](https://docs.os.agungdev.com/Handheld_and_HTPC_edition/Steam_Gaming_Mode/).
 
 > [!IMPORTANT]
-> **ISO-образы можно скачать с нашего [сайта](https://download.agungos.gg), а полезное руководство по установке доступно [здесь](https://docs.agungos.gg/General/Installation_Guide/).**
+> **ISO-образы можно скачать с нашего [сайта](https://download.os.agungdev.com), а полезное руководство по установке доступно [здесь](https://docs.os.agungdev.com/General/Installation_Guide/).**
 
 Чтобы перейти с существующего Fedora Atomic на этот образ:
 
@@ -143,7 +143,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/Anakagung2009-bit/AgungOS-d
 
 #### Альтернативные портативные устройства
 
-Пожалуйста, обратитесь к нашему [Handheld Wiki](https://docs.agungos.gg/Handheld_and_HTPC_edition/Handheld_Wiki/) за нужными изменениями настроек и плагинами Decky Loader для Steam Gaming Mode на вашем конкретном портативном устройстве.
+Пожалуйста, обратитесь к нашему [Handheld Wiki](https://docs.os.agungdev.com/Handheld_and_HTPC_edition/Handheld_Wiki/) за нужными изменениями настроек и плагинами Decky Loader для Steam Gaming Mode на вашем конкретном портативном устройстве.
 
 **Обязательно также прочитайте [документацию HHD](https://github.com/hhd-dev/hhd#after-install). Для некоторых устройств нужны отдельные изменения настроек.**
 
@@ -166,7 +166,7 @@ ujust install-hhd-controller-glyph-theme
 - Автоматические обновления для темы [Firefox GNOME](https://github.com/rafaelmardojai/firefox-gnome-theme) и [Thunderbird GNOME](https://github.com/rafaelmardojai/thunderbird-gnome-theme). *(Если установлены)*
 
 > [!IMPORTANT]
-> **ISO-образы можно скачать с нашего [сайта](https://download.agungos.gg), а полезное руководство по установке доступно [здесь](https://docs.agungos.gg/General/Installation_Guide/).**
+> **ISO-образы можно скачать с нашего [сайта](https://download.os.agungdev.com), а полезное руководство по установке доступно [здесь](https://docs.os.agungdev.com/General/Installation_Guide/).**
 
 Чтобы перейти с существующего Fedora Atomic на этот образ:
 
@@ -215,7 +215,7 @@ AgungOS появился как проект, призванный решить 
 
 AgungOS поставляется с самым свежим ядром Linux и SELinux, включенным по умолчанию, с полной поддержкой Secure Boot *(Запустите `ujust enroll-secure-boot-key` и введите пароль `universalblue`, если появится запрос на добавление нашего ключа)* и шифрования диска, что делает его разумным выбором для повседневной работы. *(Да, из AgungOS можно печатать)*
 
-Ознакомьтесь с [FAQ](https://docs.agungos.gg/General/FAQ/), чтобы узнать, чем AgungOS отличается от других Linux-систем.
+Ознакомьтесь с [FAQ](https://docs.os.agungdev.com/General/FAQ/), чтобы узнать, чем AgungOS отличается от других Linux-систем.
 
 ## Демонстрация
 
@@ -229,11 +229,11 @@ AgungOS поставляется с самым свежим ядром Linux и 
 
 ## Документация
 
-- [Установка и управление приложениями](https://docs.agungos.gg/Installing_and_Managing_Software/)
-- [Обновления, откаты и переход на другой образ](https://docs.agungos.gg/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/)
-- [Руководство по играм](https://docs.agungos.gg/Gaming/)
+- [Установка и управление приложениями](https://docs.os.agungdev.com/Installing_and_Managing_Software/)
+- [Обновления, откаты и переход на другой образ](https://docs.os.agungdev.com/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/)
+- [Руководство по играм](https://docs.os.agungdev.com/Gaming/)
 
-Смотрите [дополнительную документацию](http://docs.agungos.gg/) по проекту.
+Смотрите [дополнительную документацию](http://docs.os.agungdev.com/) по проекту.
 
 ## Проверка подлинности
 
