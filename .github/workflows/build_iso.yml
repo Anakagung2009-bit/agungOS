@@ -156,20 +156,20 @@ jobs:
         with:
           cosign-release: 'v2.6.1'
 
-      - name: Sign ISO
-        env:
-          SIGNING_KEY: ${{ secrets.SIGNING_SECRET }}
-          ISO_UPLOAD_DIR: ${{ steps.upload-directory.outputs.iso-upload-dir }}
-        run: |
-          for iso in ${ISO_UPLOAD_DIR}/*.iso; do
-            cosign sign-blob -y --key env://SIGNING_KEY "$iso" --output-signature "${iso}.sig"
-          done
+      # - name: Sign ISO
+      #   env:
+      #     SIGNING_KEY: ${{ secrets.SIGNING_SECRET }}
+      #     ISO_UPLOAD_DIR: ${{ steps.upload-directory.outputs.iso-upload-dir }}
+      #   run: |
+      #     for iso in ${ISO_UPLOAD_DIR}/*.iso; do
+      #       cosign sign-blob -y --key env://SIGNING_KEY "$iso" --output-signature "${iso}.sig"
+      #     done
 
-      - name: Attest Build Provenance
-        id: attest
-        uses: actions/attest-build-provenance@a2bbfa25375fe432b6a289bc6b6cd05ecd0c4c32 # v4
-        with:
-          subject-path: ${{ steps.upload-directory.outputs.iso-upload-dir }}/*.iso
+      # - name: Attest Build Provenance
+      #   id: attest
+      #   uses: actions/attest-build-provenance@a2bbfa25375fe432b6a289bc6b6cd05ecd0c4c32 # v4
+      #   with:
+      #     subject-path: ${{ steps.upload-directory.outputs.iso-upload-dir }}/*.iso
 
       - name: Generate ISO Metadata JSON
         env:
