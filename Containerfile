@@ -733,14 +733,11 @@ RUN --mount=type=cache,dst=/var/cache \
         python-crcmod && \
     chmod +x /usr/share/gamescope-session-plus/gamescope-session-plus && \
     sed -i 's/- xbox-elite/- deck/g' /usr/share/inputplumber/devices/50-steam_deck.yaml && \
-    /ctx/ghcurl "https://api.github.com/repos/bazzite-org/jupiter-dock-updater-bin/contents/packaged/usr/lib/jupiter-dock-updater" \
-        | jq -r '.[].download_url' \
-        | while read url; do \
-            filename=$(basename "$url"); \
-            /ctx/ghcurl "$url" -Lo "/tmp/$filename"; \
-        done && \
-    mkdir -p /usr/libexec/jupiter-dock-updater && \
-    mv -v /tmp/jupiter-dock-updater* /usr/libexec/jupiter-dock-updater/ || true && \
+    GH_TOKEN=$(cat /run/secrets/GITHUB_TOKEN 2>/dev/null || echo "") && \
+    git clone "https://x-access-token:${GH_TOKEN}@github.com/bazzite-org/jupiter-dock-updater-bin.git" \
+        --depth 1 \
+        /tmp/jupiter-dock-updater-bin && \
+    mv -v /tmp/jupiter-dock-updater-bin/packaged/usr/lib/jupiter-dock-updater /usr/libexec/jupiter-dock-updater && \
     setfattr -n user.component -v "jupiter-dock-updater" /usr/libexec/jupiter-dock-updater/* && \
     ln -s /usr/bin/steamos-logger /usr/bin/steamos-info && \
     ln -s /usr/bin/steamos-logger /usr/bin/steamos-notice && \
