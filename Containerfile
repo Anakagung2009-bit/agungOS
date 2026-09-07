@@ -707,7 +707,7 @@ RUN --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
-    dnf5 -y install --enable-repo=terra \
+    dnf5 -y install --enable-repo=terra --skip-broken \
         jupiter-fan-control \
         jupiter-hw-support-btrfs \
         galileo-mura \
@@ -715,8 +715,6 @@ RUN --mount=type=cache,dst=/var/cache \
         powerbuttond \
         inputplumber \
         gamescope-session-ogui-steam \
-        # steamos-manager-powerstation \
-        # steamos-manager-powerstation-gamescope-session-plus \
         vpower \
         steam-notif-daemon \
         acpica-tools \
