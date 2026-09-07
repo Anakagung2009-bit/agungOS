@@ -715,8 +715,8 @@ RUN --mount=type=cache,dst=/var/cache \
         powerbuttond \
         inputplumber \
         gamescope-session-ogui-steam \
-        steamos-manager-powerstation \
-        steamos-manager-powerstation-gamescope-session-plus \
+        # steamos-manager-powerstation \
+        # steamos-manager-powerstation-gamescope-session-plus \
         vpower \
         steam-notif-daemon \
         acpica-tools \
